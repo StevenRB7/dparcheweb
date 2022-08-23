@@ -56,6 +56,53 @@
           </div>
         </div>
       </div>
+      <div class="container recent" id="activity">
+        <div class="row">
+          <h2>Actividades</h2>
+          <div class="owl-carousel owl-carousel2 owl-theme d-flex">
+            <div>
+              <div class="fo card"> <img class="" src="../assets/activida3.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Ejercicio</h5>
+                    <p class="card-text">Has ejercicio y conoce nuevos amigos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/activida1.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Boxeo</h5>
+                    <p class="card-text">Disfruta del espectaculo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/activida1.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Campar</h5>
+                    <p class="card-text">Pasa tiempo con tus amigos </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/activida4.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Motocross</h5>
+                    <p class="card-text">Vive un momento unico</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
 <br>
 <br>
 <br>
@@ -228,6 +275,7 @@ export default {
     background: -linear-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
     border-radius: 15px 0 0 15px; }
   .contact-pop .row {
+    
     max-width: 918px;
     margin: 0 auto; }
   .contact-pop img {
@@ -337,6 +385,7 @@ export default {
         }
         .redes .redes2 span{
           position: absolute;
+          
           top: 0;
           left: 0;
           width: 100%;
@@ -441,6 +490,7 @@ export default {
 .card .front h3 {
   position: absolute;
   bottom: 0;
+  
   width: 100%;
   height: 45px;
   line-height: 45px;
@@ -450,6 +500,7 @@ export default {
 }
 
 .card .back {
+  
   transform: perspective(600px) rotateY(180deg);
   background: rgb(3, 35, 54);
   padding: 15px;
@@ -462,6 +513,7 @@ export default {
 }
 
 .card .back .link {
+  
   border-top: solid 1px #f3f3f3;
   height: 50px;
   line-height: 50px;
@@ -490,7 +542,7 @@ export default {
 
 }
     /* estilos2 */
-    
+
 element.style {
 }
 .row {
@@ -514,6 +566,7 @@ div {
 }
 
     .navbar-nav li .nav-link {
+      
     font-family: "PT-Sans-Bold";
     font-size: 16px;
     text-transform: uppercase;
@@ -523,42 +576,43 @@ div {
 .maine-menu .navbar-nav li.active a, .maine-menu .navbar-nav li:hover a, .maine-menu .navbar-nav li:visited a {
     color: #000000;
 }
-.fh5co-two-img .card-img-overlay {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
-  background: -linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black); }
-
-.card-img-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1.25rem;
+.fo{
+  margin:25px;
+  width: 300px;
+  
 }
+
 .card {
+
     border-radius: 15px;
     margin-bottom: 30px;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s; }
     .recent .card .card-img {
+      width: 250px;
+      margin: 250px;
       border-radius: 15px; }
+      
     .recent .card h5 {
+      
       font-size: 20px;
       color: #fff;
-      margin-bottom: 5px; }
+      margin-bottom: 320px; }
     .recent .card p {
+      
       font-size: 14px;
       color: #ffffff; }
     .recent .card.active, .recent .card:hover {
+      
       transform: scale(1.05, 1.1);
       -webkit-transform: scale(1.05, 1.1);
       -ms-transform: scale(1.05, 1.1);
       -moz-transform: scale(1.05, 1.1);
       box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25); }
+      
       .recent .card.active .card-img-overlay, .recent .card:hover .card-img-overlay {
+        
         background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
         background: -moz-linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
         background: linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
@@ -566,6 +620,7 @@ div {
       .recent .card.active p, .recent .card:hover p {
         color: #0138b0; }
 .clickme-text {
+  
   color: inherit;
   flex:  100 auto;
   justify-content: inherit;
@@ -634,4 +689,5 @@ h3 {
      list-style: none;
      text-decoration: none;
 }
+
 </style>
