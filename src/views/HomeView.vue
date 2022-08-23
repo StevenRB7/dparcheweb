@@ -19,14 +19,14 @@
     </div>
   </div>
 
-  <div>
-  <nav class="navbar navbar-expand-md  fixed-top maine-menu">
+  <div >
+  <nav class="header navbar navbar-expand-md  fixed-top maine-menu">
     <div class="container">
       <button class="navbar-toggler ml-auto" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"> <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span> </button>
       <div id="my-nav" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto">
 
-          <li class="nav-item active"> <a class="nav-link" href="#">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Home</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a></li>
           <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li>
           <li class="nav-item"> <a class="nav-link" href="#testimonial" tabindex="-1" aria-disabled="true">Categorias</a></li>
@@ -153,10 +153,12 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 
+
 import axios from "axios";
 import { db } from "@/firebase/init.js";
 
 export default {
+  
   data () {
     return {
       slide: 0,
@@ -512,16 +514,20 @@ user agent stylesheet
 div {
     display: block;
 }
-
+    /* color de letras */
     .navbar-nav li .nav-link {
     font-family: "PT-Sans-Bold";
     font-size: 16px;
     text-transform: uppercase;
     padding: 15px 25px;
     color: #fff;
+    
     }
+    /* hover del header */
 .maine-menu .navbar-nav li.active a, .maine-menu .navbar-nav li:hover a, .maine-menu .navbar-nav li:visited a {
-    color: #000000;
+    /* color: #559FE0; */
+    color: #A5E5FF;
+
 }
 .fh5co-two-img .card-img-overlay {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
@@ -613,25 +619,9 @@ h3 {
   /* border-radius: 50px; */
   padding: 20px;
 }
-.formulario {
-  color: black;
+
+.header {
+  background-color: #000000;
 }
 
-.boton1 {
-  background-color: #3175ce;
-}
-
-.boton2 {
-  background-color: #761212c1;
-}
-
-.js{
-  list-style: none;
-  text-decoration: none;
-  color:rgb(255, 255, 255);;
-}
-.sj{
-     list-style: none;
-     text-decoration: none;
-}
 </style>

@@ -5,6 +5,7 @@ import EstadosAnimoView from '../views/EstadosAnimoView.vue'
 import RegistroEventosView from '../views/Eventos/RegistroEventosView.vue'
 import RegistroEmpresasView from '../views/Empresas/RegistroEmpresasView.vue'
 import IniciarSesionView from '../views/IniciarSesionView.vue'
+import dashboard from '../views/Dashboard/Dashboard.vue'
 
 Vue.use(VueRouter)
 
@@ -34,6 +35,29 @@ const routes = [
     path: '/Inicios',
     name: 'Inicios',
     component: IniciarSesionView
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: dashboard,
+    children: [
+      {
+        path: '',
+        component: () => import(/* webpackChunkName: "Overview" */ '../views/Dashboard/Overview.vue')
+      },
+      {
+        path: 'messages',
+        component: () => import(/* webpackChunkName: "Messages" */ '../views/Dashboard/Messages.vue')
+      },
+      {
+        path: 'profile',
+        component: () => import(/* webpackChunkName: "Profile" */ '../views/Dashboard/Profile.vue')
+      },
+      {
+        path: 'settings',
+        component: () => import(/* webpackChunkName: "Settings" */ '../views/Dashboard/Settings.vue')
+      }
+    ]
   }
 
 ]
