@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="container recent" id="activity">
+      <div class="container recent" id="act">
         <div class="row">
           <h2>Actividades</h2>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <div id="act" class="a card">
+    <div id="eventos" class="a card">
         <div class="face front">
     <img src="../assets/mision.jpg" alt="">
         <h3>VISION</h3>
@@ -691,5 +691,4 @@ h3 {
      text-decoration: none;
 }
 
->>>>>>> c44a4359810a81bdc71d8a7ffd1de018b959b29a
 </style>
