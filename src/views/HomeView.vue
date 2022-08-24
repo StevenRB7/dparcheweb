@@ -29,7 +29,7 @@
           <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Home</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a></li>
           <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li>
-          <li class="nav-item"> <a class="nav-link" href="#testimonial" tabindex="-1" aria-disabled="true">Categorias</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a></li>
           <li class="nav-item"> <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a></li>
         <li>  <router-link to="/Inicios" class="nav-item"> <a class="nav-link"  href="#" tabindex="-1" aria-disabled="true">Iniciar Sesión</a></router-link></li>
 
@@ -71,10 +71,10 @@
               </div>
             </div>
             <div>
-              <div class="fo card"> <img class="" src="../assets/activida1.jpg" alt="">
+              <div class="fo card"> <img class="" src="../assets/actividad6.jpg" alt="">
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
-                    <h5 class="card-title">Boxeo</h5>
+                    <h5 class="card-title">Basquetbol</h5>
                     <p class="card-text">Disfruta del espectaculo</p>
                   </div>
                 </div>
@@ -134,7 +134,78 @@
             </div>
         </div>
     </div>
+</div>
+<br>
+<br>
+ <div class="container  recent" id="categoria">
+        <div class="arow">
+          <h2>Categoria</h2>
+          <br>
+          <br>
+          <div class="owl-carousel owl-carousel2 owl-theme d-flex">
+            <div>
+              <div class="fo card"> <img class="" src="../assets/cultura2.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Cultura</h5>
+                    <p class="card-text">Cultura se refiere al conjunto de bienes materiales y espirituales de un grupo social transmitido de generación en generación a fin de orientar las prácticas individuales y colectivas.  Incluye lengua, procesos, modos de vida, costumbres, tradiciones, hábitos, valores, patrones, herramientas y conocimiento.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/restaurante2.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Restaurantes</h5>
+                    <p class="card-text">Es un establecimiento de servicio, Hoy en día existe una gran variedad de modalidades de servicio y tipos de cocina, es uno de los lugares que más visitamos las personas para comer, beber y porque no también para celebrar y encontrarnos con amigos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/bares1.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Bares</h5>
+                    <p class="card-text">Un bar es un lugar en donde se sirven bebidas alcohólicas, refrescos o infusiones. Algunos bares se organizan especialmente como lugares de encuentro entre conocidos y amigos, como espacios de interacción social. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/recreacion.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Recreacion</h5>
+                    <p class="card-text">Como recreación se denomina la actividad destinada al aprovechamiento del tiempo libre para el esparcimiento físico y mental, realizado de forma individual o grupal. Factor de formación de niños y adolescentes, vinculándose como modos de estimulación y aprendizaje.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/motel.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Moteles</h5>
+                    <p class="card-text">Lo que de verdad caracteriza a estos establecimientos es la intimidad que ofrecen al huésped.  se suele acceder directamente por el garaje individual a la habitación asegurando la máxima privacidad. Tambien los moteles pueden ser una opción buena y barata para hospedarse por un rato. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="fo card"> <img class="" src="../assets/discoteca1.jpg" alt="">
+                <div class="card-img-overlay"> <a href="#"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Discotecas</h5>
+                    <p class="card-text">Una discoteca es un lugar en donde se sirven bebidas alcohólicas, refrescos o infusiones. Algunos bares se organizan especialmente como lugares de encuentro entre conocidos y amigos, como espacios de interacción social.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
+ </div>
         <br>
         <br>
         <br>
@@ -299,13 +370,13 @@ export default {
     .contact-pop .content p {
       color: #584f53; }
     .contact-pop .content hr {
-      background-color: #0138b0;
+      background-color: rgb(89, 165, 252);
       width: 50px;
       height: 5px;
       border: none;
       margin-left: 0; }
     .contact-pop .content a {
-      background-color: #0138b0;
+      background-color: rgb(89, 165, 252);
       width: 158px;
       border-radius: 40px;
       color: #fefefe;
@@ -359,8 +430,8 @@ export default {
         .redes .redes2{
           position: relative;
           list-style: none;
-          width: 40px;
-          height: 40px;
+          width: 50px;
+          height: 50px;
           margin: 0 10px;
         }
         .redes .redes2::before{
@@ -457,8 +528,8 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: rgba(100, 213, 254, 0.902);;
+  min-height: 70vh;
+  background: rgb(89, 165, 252);
 }
 
 .a {
@@ -547,6 +618,14 @@ export default {
 
 element.style {
 }
+.arow {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 100px;
+}
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -579,7 +658,7 @@ div {
     /* hover del header */
 .maine-menu .navbar-nav li.active a, .maine-menu .navbar-nav li:hover a, .maine-menu .navbar-nav li:visited a {
     /* color: #559FE0; */
-    color: #A5E5FF;
+    color: rgb(89, 165, 252);
 
 }
 .fo{
@@ -600,15 +679,17 @@ div {
       margin: 250px;
       border-radius: 15px; }
       
+
     .recent .card h5 {
       
       font-size: 20px;
-      color: #fff;
-      margin-bottom: 320px; }
+      color: rgb(255, 255, 255);
+      margin-bottom: 200px; }
     .recent .card p {
       
-      font-size: 14px;
-      color: #ffffff; }
+      font-size: 15px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: transparent }
     .recent .card.active, .recent .card:hover {
       
       transform: scale(1.05, 1.1);
@@ -624,7 +705,7 @@ div {
         background: linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
         background: -ms-linear-gradient(rgba(0, 0, 0, 0.3),#559FE0); }
       .recent .card.active p, .recent .card:hover p {
-        color: #0138b0; }
+        color: #ffffff; }
 .clickme-text {
   
   color: inherit;
