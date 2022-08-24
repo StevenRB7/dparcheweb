@@ -6,7 +6,7 @@
       background="#fffff"
       img-width="90%"
       img-height="200"
-      style="text-shadow: 1px 1px 2px ;"
+      style="text-shadow: 1px 1px 2px;"
     >
       <b-carousel-slide>
         <template #img>
