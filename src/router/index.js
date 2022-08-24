@@ -37,24 +37,24 @@ const routes = [
     component: IniciarSesionView
   },
   {
-    path: '/dashboard',
+    path: '',
     name: 'dashboard',
     component: dashboard,
     children: [
       {
-        path: '',
+        path: '/dashboard',
         component: () => import(/* webpackChunkName: "Overview" */ '../views/Dashboard/Overview.vue')
       },
       {
-        path: 'messages',
+        path: '/messages',
         component: () => import(/* webpackChunkName: "Messages" */ '../views/Dashboard/Messages.vue')
       },
       {
-        path: 'profile',
+        path: '/profile',
         component: () => import(/* webpackChunkName: "Profile" */ '../views/Dashboard/Profile.vue')
       },
       {
-        path: 'settings',
+        path: '/settings',
         component: () => import(/* webpackChunkName: "Settings" */ '../views/Dashboard/Settings.vue')
       }
     ]
