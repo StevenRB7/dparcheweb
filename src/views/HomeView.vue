@@ -679,8 +679,6 @@ h3 {
   background-color: #000000;
 }
 
-<<<<<<< HEAD
-=======
 .js{
   list-style: none;
   text-decoration: none;

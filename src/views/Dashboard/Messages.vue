@@ -1,17 +1,27 @@
 <template>
-    <div class="messages">
-        Messages
+    <div class="mesage">
+                <!-- <Sidebar/> -->
+
+<p>mesa</p>
+
     </div>
 </template>
 
 <script>
+// import Sidebar from '@/components/Sidebar.vue'
+
 export default {
+//   name: 'dashboard',
+//   components: {
+//     Sidebar
+//   }
 }
+
 </script>
 
 <style scoped>
-.messages {
-    display: flex;
+.mesa {
+ display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
