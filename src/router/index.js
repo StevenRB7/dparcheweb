@@ -47,20 +47,24 @@ const routes = [
     children: [
       {
         path: '/dashboard',
-        component: () => import('../views/Dashboard/Overview.vue')
+        component: () => import('../views/Dashboard/PublicacionesView.vue')
       },
       {
-        path: '/mesage',
-        component: () => import('../views/Dashboard/Messages.vue')
+        path: '/eventos',
+        component: () => import('../views/Dashboard/EventosView.vue')
       },
       {
-        path: '/profile',
-        component: () => import('../views/Dashboard/Profile.vue')
+        path: '/animos',
+        component: () => import('../views/Dashboard/AnimosView.vue')
       },
       {
-        path: '/settings',
-        component: () => import('../views/Dashboard/Settings.vue')
+        path: '/usuarios',
+        component: () => import('../views/Dashboard/UsuariosView.vue')
 
+      },
+      {
+        path: '/intereses',
+        component: () => import('../views/Dashboard/InteresesView.vue')
       }
     ]
   }

@@ -1,8 +1,8 @@
 <template>
-    <div class="mesage">
+    <div class="intereses">
                 <!-- <Sidebar/> -->
 
-<p>mesa</p>
+<p>Intereses</p>
 
     </div>
 </template>

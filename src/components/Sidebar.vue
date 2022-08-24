@@ -7,22 +7,27 @@
         <div class="menu-items">
             <router-link to="/dashboard" exact active-class="active"  tag="button"   class="side-btn">
                 <div class="link-container">
-                    Publicación
+                    Publicaciónes
                 </div>
             </router-link>
-            <router-link to="/mesage" exact active-class="active"   tag="button"   class="side-btn">
-                <div class="link-container">
-                    Estados de animo
-                </div>
-            </router-link>
-            <router-link to="/profile"  exact  active-class="active"  tag="button"  class="side-btn">
+            <router-link to="/eventos" exact active-class="active"   tag="button"   class="side-btn">
                 <div class="link-container">
                     Eventos
                 </div>
             </router-link>
-            <router-link to="/settings"  exact active-class="active"  tag="button"   class="side-btn">
+            <router-link to="/animos"  exact  active-class="active"  tag="button"  class="side-btn">
                 <div class="link-container">
-                    Settings
+                    Estados de animo
+                </div>
+            </router-link>
+            <router-link to="/intereses"  exact active-class="active"  tag="button"   class="side-btn">
+                <div class="link-container">
+                    Intereses
+                </div>
+            </router-link>
+            <router-link to="/usuarios"  exact active-class="active"  tag="button"   class="side-btn">
+                <div class="link-container">
+                    Usuarios
                 </div>
             </router-link>
         </div>
