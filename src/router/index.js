@@ -42,6 +42,7 @@ const routes = [
     component: IniciarSesionView
   },
   {
+    path: '',
     component: DashboardView,
     children: [
       {
