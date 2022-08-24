@@ -71,42 +71,116 @@
         <div class="text-center mt-4 name">
             Hola developer
         </div>
-        <form class="p-3 mt-3">
+        <form class="p-3 mt-3" @submit.prevent="Login()">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
-                <input type="text" name="usuario" id="userName" placeholder="Username">
+                <input type="text" v-model="form.email" name="email" id="email" placeholder="email">
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
-                <input type="password" name="contraseña" id="pwd" placeholder="Password">
+                <input type="password" v-model="form.clave" name="clave" id="clave" placeholder="Password">
+                <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
             </div>
-            <button class="btn mt-3">Iniciar sesión</button>
+            <button pill
+             variant
+             type="submit"
+             class="btn mt-3">Iniciar sesión
+            </button>
         </form>
         <div class="text-center fs-6">
             <!-- <a href="#">Forget password?</a> or <a href="#">Sign up</a> -->
         </div>
     </div>
 </ul>
-
 </div>
-
-     <!-- <FooterComponent/> -->
+  <!-- <FooterComponent/> -->
   </div>
 </template>
-
 <script>
+/* eslint-disable */
 
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-// import FooterComponent from '@/components/FooterComponent.vue'
+import axios from "axios";
 
 export default {
   name: 'Inicios',
-  components: {
-    // HelloWorld
-    // FooterComponent
-  }
-}
+  components: {},
+     data() {
+      return {
+        showPassword: true,
+        isLogin: false,
+        token: "",
+        message: "",
+        user: {
+        rol: "",
+        nombre: "",
+        apellido: ""
+        },
+       form: {
+        email: "",
+        clave: "",
+      },
+    };
+  },
+   mounted() {
+    this.Login;
+  },
+
+  methods: {
+    closeSesion() {
+      this.isLogin = false;
+      this.token = "";
+      localStorage.clear();
+      window.location.replace("/");
+    },
+    //...mapActions(['mockLogin']),
+    Login() {
+      let headers = {
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+          Accept: "application/json",
+          Authorization: "Bearer " + localStorage.token,
+        },
+      };
+      axios
+        .post(
+          "https://interbusapi.herokuapp.com/usuarios/login",
+          this.form,
+          {
+            validateStatus: function (status) {
+              return status < 500; // Resuelve solo si el código de estado es menor que 500
+            },
+          },
+          headers
+        )
+        .then((response) => {
+          if (response.data.message !== "Invalid email y/o clave") {
+            this.user.rol = response.data.rows[0].rol;
+            // this.user.nombre = response.data.rows[0].nombre;
+            // this.user.apellido = response.data.rows[0].apellido;
+            localStorage.rol = response.data.rows[0].rol;
+            localStorage.nombre = response.data.rows[0].nombre;
+            localStorage.apellido = response.data.rows[0].apellido;
+            // console.log(this.user.rol);
+            let access_token = response.data.token;
+            localStorage.token = access_token;
+            this.isLogin = true;
+            //console.log(localStorage.token);
+            //console.log(response.data.rows[0].rol);
+            //console.log(access_token);
+            if (this.user.rol === "administrador") {
+              //opcion vuex
+              //store.dispatch('mockLogin')
+              localStorage.token;
+              this.$router.push("/dashboard");
+            }
+          } else {
+            this.message = this.$swal("Email y/o clave incorrecta");
+          }
+          console.log(response);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>

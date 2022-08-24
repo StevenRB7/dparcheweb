@@ -2,7 +2,7 @@
     <div class="dashboard">
         <Sidebar />
         <div class="content">
-            <router-view />
+            <router-view/>
         </div>
     </div>
 </template>
@@ -11,7 +11,7 @@
 import Sidebar from '@/components/Sidebar.vue'
 
 export default {
-  name: 'home',
+  name: 'dashboard',
   components: {
     Sidebar
   }

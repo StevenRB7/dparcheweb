@@ -1,30 +1,32 @@
 <template>
+<div>
     <div class="sidebar">
         <div class="title">
-            Simple Sidebar
+            DashBoard Developer
         </div>
         <div class="menu-items">
-            <router-link to="/" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/dashboard" exact active-class="active"  tag="button"   class="side-btn">
                 <div class="link-container">
-                    Overview
+                    Publicación
                 </div>
             </router-link>
-            <router-link to="/messages" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/mesage" exact active-class="active"   tag="button"   class="side-btn">
                 <div class="link-container">
-                    Messages
+                    Estados de animo
                 </div>
             </router-link>
-            <router-link to="/profile" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/profile"  exact  active-class="active"  tag="button"  class="side-btn">
                 <div class="link-container">
-                    Profile
+                    Eventos
                 </div>
             </router-link>
-            <router-link to="/settings" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/settings"  exact active-class="active"  tag="button"   class="side-btn">
                 <div class="link-container">
                     Settings
                 </div>
             </router-link>
         </div>
+    </div>
     </div>
 </template>
 

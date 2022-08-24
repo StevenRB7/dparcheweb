@@ -1,7 +1,7 @@
 <template>
     <div class="settings">
-        Settings
-    </div>
+<p>settings</p>
+</div>
 </template>
 
 <script>

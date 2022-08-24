@@ -5,7 +5,12 @@ import EstadosAnimoView from '../views/EstadosAnimoView.vue'
 import RegistroEventosView from '../views/Eventos/RegistroEventosView.vue'
 import RegistroEmpresasView from '../views/Empresas/RegistroEmpresasView.vue'
 import IniciarSesionView from '../views/IniciarSesionView.vue'
-import dashboard from '../views/Dashboard/Dashboard.vue'
+import DashboardView from '../views/Dashboard/DashboardView.vue'
+
+// import Messages from '../views/Dashboard/Messages.vue'
+// import Overview from '../views/Dashboard/Overview.vue'
+// import Profile from '../views/Dashboard/Profile.vue'
+// import Settings from '../views/Dashboard/Settings.vue'
 
 Vue.use(VueRouter)
 
@@ -37,25 +42,25 @@ const routes = [
     component: IniciarSesionView
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
-    component: dashboard,
+    path: '',
+    component: DashboardView,
     children: [
       {
-        path: '',
-        component: () => import(/* webpackChunkName: "Overview" */ '../views/Dashboard/Overview.vue')
+        path: '/dashboard',
+        component: () => import('../views/Dashboard/Overview.vue')
       },
       {
-        path: 'messages',
-        component: () => import(/* webpackChunkName: "Messages" */ '../views/Dashboard/Messages.vue')
+        path: '/mesage',
+        component: () => import('../views/Dashboard/Messages.vue')
       },
       {
-        path: 'profile',
-        component: () => import(/* webpackChunkName: "Profile" */ '../views/Dashboard/Profile.vue')
+        path: '/profile',
+        component: () => import('../views/Dashboard/Profile.vue')
       },
       {
-        path: 'settings',
-        component: () => import(/* webpackChunkName: "Settings" */ '../views/Dashboard/Settings.vue')
+        path: '/settings',
+        component: () => import('../views/Dashboard/Settings.vue')
+
       }
     ]
   }
@@ -63,6 +68,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 
