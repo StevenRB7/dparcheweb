@@ -31,7 +31,7 @@
           <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
           <li class="nav-item"> <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a></li>
           <li class="nav-item"> <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a></li>
-        <li>  <router-link to="/Inicios" class="nav-item"> <a class="nav-link"  href="#" tabindex="-1" aria-disabled="true">Iniciar Sesión</a></router-link></li>
+        <li   class="nav-item"><a  to="/Inicios" class="nav-link"  href="/Inicios" tabindex="-1" aria-disabled="true">Iniciar Sesión</a></li>
 
         </ul>
       </div>
@@ -359,28 +359,27 @@ export default {
   .contact-pop .content {
     padding: 45px 20px 20px 40px;
     height: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.859);
     border-radius: 0 15px 15px 0;
-
 }
-    .contact-pop .content h3 {
+    .contact-pop h3 {
       color: #3d383a;
       font-size: 30px;
       text-transform: uppercase;
       margin-bottom: 10px; }
-    .contact-pop .content h4 {
+    .contact-pop  h4 {
       color: #978b91;
       font-size: 18px;
       font-family: "PT-Sans-Regular"; }
-    .contact-pop .content p {
+    .contact-pop  p {
       color: #584f53; }
-    .contact-pop .content hr {
-      background-color: rgb(89, 165, 252);
+    .contact-pop  hr {
+      background-color: rgba(0, 119, 255, 0.631);
       width: 50px;
       height: 5px;
       border: none;
       margin-left: 0; }
-    .contact-pop .content a {
+    .contact-pop  a {
       background-color: rgb(89, 165, 252);
       width: 158px;
       border-radius: 40px;
@@ -388,18 +387,18 @@ export default {
       padding: 10px 0;
       margin-top: 20px; }
     @media (max-width: 991px) {
-      .contact-pop .content {
+      .contact-pop  {
         padding: 20px 20px 20px 25px; }
-        .contact-pop .content h3 {
+        .contact-pop  h3 {
           font-size: 24px; }
-        .contact-pop .content h4 {
+        .contact-pop  h4 {
           font-size: 16px; }
-        .contact-pop .content p {
+        .contact-pop  p {
           font-size: 14px; }
-        .contact-pop .content a {
+        .contact-pop  a {
           width: 120px;
           padding: 5px 0; }
-        .contact-pop .content hr {
+        .contact-pop  hr {
           margin: 10px 0; } }
   @media (max-width: 991px) {
     .contact-pop {
@@ -413,7 +412,7 @@ export default {
         border-radius: 15px 15px 0 0; }
       .contact-pop .card-img-overlay {
         border-radius: 15px 15px 0 0; }
-      .contact-pop .content {
+      .contact-pop  {
         border-radius: 0 0 15px 15px; } }
 
 
@@ -772,25 +771,9 @@ h3 {
   background-color: #000000;
 }
 
-.js{
-  list-style: none;
-  text-decoration: none;
-  color:rgb(255, 255, 255);;
-}
-.sj{
-     list-style: none;
-     text-decoration: none;
-}
-
 .div1{
   
     z-index: -1;
-
-}
-.div2{
 }
 
-.hr{
-
-}
 </style>
