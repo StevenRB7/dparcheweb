@@ -81,6 +81,7 @@
                 <input type="password" v-model="form.clave" name="clave" id="clave" placeholder="Password">
                 <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
             </div>
+            <h10>¿Olvidaste tu contraseña?</h10>
             <button pill
              variant
              type="submit"

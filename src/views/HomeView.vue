@@ -26,7 +26,7 @@
       <div id="my-nav" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto">
 
-          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Inicio</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a></li>
           <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
           <li class="nav-item"> <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a></li>
@@ -374,7 +374,7 @@ export default {
     .contact-pop  p {
       color: #584f53; }
     .contact-pop  hr {
-      background-color: rgba(0, 119, 255, 0.631);
+      background-color: rgb(0, 119, 255);
       width: 50px;
       height: 5px;
       border: none;
@@ -532,6 +532,9 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-left: 1vh;
+   margin-right: 1vh;
+
   min-height: 70vh;
   background: rgb(89, 165, 252);
 }
