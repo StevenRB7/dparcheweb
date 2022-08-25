@@ -30,6 +30,11 @@
                     Usuarios
                 </div>
             </router-link>
+            <router-link to="/frases"  exact active-class="active"  tag="button"   class="side-btn">
+                <div class="link-container">
+                   Frases
+                </div>
+            </router-link>
         </div>
     </div>
     </div>

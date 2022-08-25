@@ -1,46 +1,32 @@
 <template>
 <!-- eslint-disable -->
   <div class="Empresas">
-    <HeaderComponent/>
- <b-container>
+    <HeaderComponent/> 
+<b-container>
       <b-row class="text-center">
         <b-col md="12" class="py-3">
         </b-col>
       </b-row>
-      <h3 class="font-weight-bold text-primary">Tabla Publicaciones</h3>
+      <h3 class="font-weight-bold text-primary">Frases</h3>
     </b-container>
-    <div class="table-responsive">
-<table class="table table-bordered " style="width: 80%"  align="center">
+<table class="table table-bordered " style="width: 80%" align="center">
       <thead>
         <tr class="bg-primary text-white" >
-          <th >Id</th>
-          <th >Correo</th>
-          <th >Usuario</th>
-          <th >Categoria</th>
-          <th >Descripcion</th>
-          <th >Url de perfil</th>
-          <th >Fecha</th>
-          <th >Ubicacion</th>
-          <th >Url Img Publicacion</th>
-          <th >Opciones</th>
+          <th scope="col">Id</th>
+          <th scope="col">Frase</th>
+          <th scope="col">Opciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(user, index) in dataStatusGet" :key="index">
-          <td class="col-ms-4">{{ user.ides }}</td>
-          <td class="col-ms-4">{{ user.correoNom }}</td>
-          <td class="col-ms-4">{{ user.nomCorreo }}</td>
-          <td class="col-ms-4">{{ user.categorias }}</td>
-          <td class="col-ms-4">{{ user.descripciones }}</td>
-          <td class="col-ms-4">{{ user.fotoCorreo }}</td>
-          <td class="col-ms-4">{{ user.tiempo }}</td>
-          <td class="col-ms-4">{{ user.ubicacion }}</td>
-          <td class="col-ms-4">{{ user.url }}</td>
-          <td><button class="btn btn-danger" @click="eliminarDato(index)">Eliminar</button></td>
+        <tr v-for="(user, index) in dataFrasesGet" :key="index">
+          <th scope="row">{{index}}</th>
+          <td>{{ user.mensaje }}</td>
+          <td>
+          <button id="delBtn" class="btn btn-danger">Eliminar</button>
+          </td>
         </tr>
       </tbody>
     </table>
-    </div>
     <FooterComponent />
   </div>
 </template>
@@ -64,29 +50,13 @@ export default {
 
   data() {
     return {
-      slide: 0,
-      sliding: null,
-
       usuarios: {
-        ides: "",
-        correoNom: "",
-        nomCorreo: "",
-        categorias: "",
-        descripciones: "",
-        fotoCorreo: "",
-        tiempo: "",
-        ubicacion: "",
-        url: "",
+        mensaje: "",
       },
 
-      dataUsers: [],
-      dataStatusGet: [],
-
-      frases: {
-         id: "",
-         mensaje: "",
-      },
+ 
       dataFrasesGet: [],
+      dataStatusGet: [],
     }
   },
   // firestore(){
@@ -95,13 +65,14 @@ export default {
   //     }
   // },
   mounted(){
-   this.getPublicaciones();
+    this.getStatus();
+    this.getFrases();
   },
 
   methods: {
-   async getPublicaciones() {
+    async getStatus() {
       let listStatus = [];
-      db.collection("publicacion")
+      db.collection("Intereses")
         .get()
         .then(function (result) {
           result.forEach(function (status) {
@@ -110,11 +81,29 @@ export default {
           return listStatus;
         })
         .then((response) => {
-          console.table(response)
+          console.table(response);
         this.dataStatusGet = response;
 
         });
     },
+
+    async getFrases() {
+      axios
+        .get(
+          "https://deparche-51e93-default-rtdb.firebaseio.com/Frases.json?print=pretty"
+        )
+        .then((rows) => {
+          return rows.data;
+        })
+        .then((responseTwo) => {
+          this.dataFrasesGet = responseTwo;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+
+
     //  deleteProduct(user){
     //   db.collection("Intereses").doc(user).delete().then(() => {
     // console.log("Document successfully deleted!");
@@ -178,9 +167,3 @@ function eliminar(id){
      
     }
 </script>
-
-<style scoped>
-.size{
-  width: 50px;
-}
-</style>

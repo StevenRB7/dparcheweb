@@ -1,24 +1,110 @@
 <template>
-    <div class="animos">
-<p>profile</p>
-</div>
+  <div class="home">
+    <HeaderComponent />
+    <b-container>
+      <b-row class="text-center">
+        <b-col md="12" class="py-3">
+        </b-col>
+      </b-row>
+      <h3 class="font-weight-bold text-primary">Estatos De Animo</h3>
+    </b-container>
+    <table class="table table-bordered " style="width: 80%" align="center">
+      <thead>
+        <tr class="bg-primary text-white" >
+          <th scope="col">Id</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Estado de Animo</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(user, index) in dataStatusGet" :key="index">
+          <td>{{ user.idCorreo }}</td>
+          <td>{{ user.usuario }}</td>
+          <td>{{ user.estado }}</td>
+          <td><button class="btn btn-danger" @click="eliminarDato(index)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
-export default {
+/* eslint-disable */
 
-}
+import HeaderComponent from "@/components/HeaderComponent.vue";
+
+import axios from "axios";
+import { db } from "@/firebase/init.js";
+
+export default {
+  name: "EstadosAnimoView",
+  components: {
+    HeaderComponent,
+  
+  },
+
+  data() {
+    return {
+      usuarios: {
+        id: "",
+        mail: "",
+        nombre: "",
+      },
+
+      dataUsers: [],
+      dataStatusGet: [],
+    };
+  },
+
+  mounted() {
+    this.verUsuarios();
+    this.getStatus();
+  },
+  methods: {
+    verUsuarios() {
+      axios
+        .get(
+          "https://deparche-51e93-default-rtdb.firebaseio.com/User.json?print=pretty"
+        )
+        .then((rows) => {
+          return rows.data;
+        })
+        .then((responseTwo) => {
+          this.dataUsers = responseTwo;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+
+    async getStatus() {
+      let listStatus = [];
+      db.collection("Estados De Animo")
+        .get()
+        .then(function (result) {
+          result.forEach(function (status) {
+            listStatus.push(status.data());
+          });
+          return listStatus;
+        })
+        .then((response) => {
+        this.dataStatusGet = response;
+
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>
-.profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    font-size: 40px;
-    color: rgb(167, 167, 167);
-    font-weight: 600;
+.py-3 {
+  color: rgb(255, 255, 255);
+  outline-color: rgb(100, 162, 255);
+}
+.btnlist {
+  color: rgb(255, 255, 255);
+  background-color: rgb(65, 119, 254);
+  border-color: blue;
 }
 </style>
