@@ -11,7 +11,7 @@
           <div class="card-img-overlay"> </div>
         </div>
       </div>
-      <div class="col-sm-6 pr-0 pl-0">
+      <div class="col-sm-6 pr-0 pl-0  div1">
         <div class="card"> <img class="card-img" src="../assets/inici2.jpg" alt="">
           <div class="card-img-overlay"> </div>
         </div>
@@ -26,12 +26,12 @@
       <div id="my-nav" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto">
 
-          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Inicio</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a></li>
-          <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li>
+          <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
           <li class="nav-item"> <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a></li>
           <li class="nav-item"> <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a></li>
-        <li>  <router-link to="/Inicios" class="nav-item"> <a class="nav-link"  href="#" tabindex="-1" aria-disabled="true">Iniciar Sesión</a></router-link></li>
+        <li   class="nav-item"><a  to="/Inicios" class="nav-link"  href="/Inicios" tabindex="-1" aria-disabled="true">Iniciar Sesión</a></li>
 
         </ul>
       </div>
@@ -46,11 +46,11 @@
             <div class="card-img-overlay"> </div>
           </div>
         </div>
-        <div class="col-md-6   " id="about">
-          <div class="content  ">
+        <div class="col-md-6 div2   " id="about">
+          <div class="content div2">
             <h3>Comunidad D'PARCHE</h3>
-            <h4>Professional </h4>
-            <hr />x|
+
+            <hr class="hr"/>
             <p> Generar con la ayuda de herramientas TIC espacios dedicados a mejorar la salud mental de las personas y economía.</p>
             <a href="#nosotros" class="btn">CONTACTANOS</a> </div>
           </div>
@@ -65,6 +65,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Ejercicio</h5>
+                       <br><br><br><br><br><br>
                     <p class="card-text">Has ejercicio y conoce nuevos amigos</p>
                   </div>
                 </div>
@@ -75,6 +76,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Basquetbol</h5>
+                      <br><br><br><br><br><br>
                     <p class="card-text">Disfruta del espectaculo</p>
                   </div>
                 </div>
@@ -85,6 +87,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Campar</h5>
+                      <br><br><br><br><br><br>
                     <p class="card-text">Pasa tiempo con tus amigos </p>
                   </div>
                 </div>
@@ -95,6 +98,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Motocross</h5>
+                      <br><br><br><br><br><br>
                     <p class="card-text">Vive un momento unico</p>
                   </div>
                 </div>
@@ -139,9 +143,8 @@
 <br>
  <div class="container  recent" id="categoria">
         <div class="arow">
-          <h2>Categoria</h2>
-          <br>
-          <br>
+          <h2 class="cate">Categoria</h2>
+          <br><br>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
               <div class="fo card"> <img class="" src="../assets/cultura2.jpg" alt="">
@@ -356,26 +359,27 @@ export default {
   .contact-pop .content {
     padding: 45px 20px 20px 40px;
     height: 100%;
-    background: #fff;
-    border-radius: 0 15px 15px 0; }
-    .contact-pop .content h3 {
+    background: rgba(255, 255, 255, 0.859);
+    border-radius: 0 15px 15px 0;
+}
+    .contact-pop h3 {
       color: #3d383a;
       font-size: 30px;
       text-transform: uppercase;
       margin-bottom: 10px; }
-    .contact-pop .content h4 {
+    .contact-pop  h4 {
       color: #978b91;
       font-size: 18px;
       font-family: "PT-Sans-Regular"; }
-    .contact-pop .content p {
+    .contact-pop  p {
       color: #584f53; }
-    .contact-pop .content hr {
-      background-color: rgb(89, 165, 252);
+    .contact-pop  hr {
+      background-color: rgb(0, 119, 255);
       width: 50px;
       height: 5px;
       border: none;
       margin-left: 0; }
-    .contact-pop .content a {
+    .contact-pop  a {
       background-color: rgb(89, 165, 252);
       width: 158px;
       border-radius: 40px;
@@ -383,18 +387,18 @@ export default {
       padding: 10px 0;
       margin-top: 20px; }
     @media (max-width: 991px) {
-      .contact-pop .content {
+      .contact-pop  {
         padding: 20px 20px 20px 25px; }
-        .contact-pop .content h3 {
+        .contact-pop  h3 {
           font-size: 24px; }
-        .contact-pop .content h4 {
+        .contact-pop  h4 {
           font-size: 16px; }
-        .contact-pop .content p {
+        .contact-pop  p {
           font-size: 14px; }
-        .contact-pop .content a {
+        .contact-pop  a {
           width: 120px;
           padding: 5px 0; }
-        .contact-pop .content hr {
+        .contact-pop  hr {
           margin: 10px 0; } }
   @media (max-width: 991px) {
     .contact-pop {
@@ -408,7 +412,7 @@ export default {
         border-radius: 15px 15px 0 0; }
       .contact-pop .card-img-overlay {
         border-radius: 15px 15px 0 0; }
-      .contact-pop .content {
+      .contact-pop  {
         border-radius: 0 0 15px 15px; } }
 
 
@@ -528,15 +532,20 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-left: 1vh;
+   margin-right: 1vh;
+
   min-height: 70vh;
   background: rgb(89, 165, 252);
 }
 
 .a {
+  background: rgb(89, 165, 252);
   position:relative;
   width: 400px;
   height: 450px;
   margin: 20px;
+  border: rgb(89, 165, 252);
 }
 
 .card .face {
@@ -618,6 +627,9 @@ export default {
 
 element.style {
 }
+.cate{
+      margin-left: 468px;
+}
 .arow {
     display: -ms-flexbox;
     display: flex;
@@ -684,7 +696,9 @@ div {
       
       font-size: 20px;
       color: rgb(255, 255, 255);
-      margin-bottom: 200px; }
+      margin-bottom: 200px; 
+      }
+
     .recent .card p {
       
       font-size: 15px;
@@ -760,14 +774,9 @@ h3 {
   background-color: #000000;
 }
 
-.js{
-  list-style: none;
-  text-decoration: none;
-  color:rgb(255, 255, 255);;
-}
-.sj{
-     list-style: none;
-     text-decoration: none;
+.div1{
+  
+    z-index: -1;
 }
 
 </style>
