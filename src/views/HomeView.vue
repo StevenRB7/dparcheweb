@@ -28,7 +28,7 @@
 
           <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Home</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a></li>
-          <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li>
+          <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
           <li class="nav-item"> <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a></li>
           <li class="nav-item"> <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a></li>
         <li>  <router-link to="/Inicios" class="nav-item"> <a class="nav-link"  href="#" tabindex="-1" aria-disabled="true">Iniciar Sesión</a></router-link></li>
@@ -65,6 +65,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Ejercicio</h5>
+                       <br><br><br><br><br><br>
                     <p class="card-text">Has ejercicio y conoce nuevos amigos</p>
                   </div>
                 </div>
@@ -75,6 +76,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Basquetbol</h5>
+                      <br><br><br><br><br><br>
                     <p class="card-text">Disfruta del espectaculo</p>
                   </div>
                 </div>
@@ -85,6 +87,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Campar</h5>
+                      <br><br><br><br><br><br>
                     <p class="card-text">Pasa tiempo con tus amigos </p>
                   </div>
                 </div>
@@ -95,6 +98,7 @@
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Motocross</h5>
+                      <br><br><br><br><br><br>
                     <p class="card-text">Vive un momento unico</p>
                   </div>
                 </div>
@@ -139,9 +143,8 @@
 <br>
  <div class="container  recent" id="categoria">
         <div class="arow">
-          <h2>Categoria</h2>
-          <br>
-          <br>
+          <h2 class="cate">Categoria</h2>
+          <br><br>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
               <div class="fo card"> <img class="" src="../assets/cultura2.jpg" alt="">
@@ -533,10 +536,12 @@ export default {
 }
 
 .a {
+  background: rgb(89, 165, 252);
   position:relative;
   width: 400px;
   height: 450px;
   margin: 20px;
+  border: rgb(89, 165, 252);
 }
 
 .card .face {
@@ -618,6 +623,9 @@ export default {
 
 element.style {
 }
+.cate{
+      margin-left: 468px;
+}
 .arow {
     display: -ms-flexbox;
     display: flex;
@@ -684,7 +692,9 @@ div {
       
       font-size: 20px;
       color: rgb(255, 255, 255);
-      margin-bottom: 200px; }
+      margin-bottom: 200px; 
+      }
+
     .recent .card p {
       
       font-size: 15px;
