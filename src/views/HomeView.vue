@@ -11,7 +11,7 @@
           <div class="card-img-overlay"> </div>
         </div>
       </div>
-      <div class="col-sm-6 pr-0 pl-0">
+      <div class="col-sm-6 pr-0 pl-0  div1">
         <div class="card"> <img class="card-img" src="../assets/inici2.jpg" alt="">
           <div class="card-img-overlay"> </div>
         </div>
@@ -46,11 +46,11 @@
             <div class="card-img-overlay"> </div>
           </div>
         </div>
-        <div class="col-md-6   " id="about">
-          <div class="content  ">
+        <div class="col-md-6 div2   " id="about">
+          <div class="content div2">
             <h3>Comunidad D'PARCHE</h3>
-            <h4>Professional </h4>
-            <hr />x|
+
+            <hr class="hr"/>
             <p> Generar con la ayuda de herramientas TIC espacios dedicados a mejorar la salud mental de las personas y economía.</p>
             <a href="#nosotros" class="btn">CONTACTANOS</a> </div>
           </div>
@@ -357,7 +357,9 @@ export default {
     padding: 45px 20px 20px 40px;
     height: 100%;
     background: #fff;
-    border-radius: 0 15px 15px 0; }
+    border-radius: 0 15px 15px 0;
+
+}
     .contact-pop .content h3 {
       color: #3d383a;
       font-size: 30px;
@@ -770,4 +772,15 @@ h3 {
      text-decoration: none;
 }
 
+.div1{
+  
+    z-index: -1;
+
+}
+.div2{
+}
+
+.hr{
+
+}
 </style>
