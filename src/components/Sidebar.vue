@@ -110,11 +110,10 @@ export default {
     border: none;
     padding: 16px 0px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 500;
     color: white;
     background-color: transparent;
-    font-family: "Gloria Hallelujah";
     font-family: "ink free";
 
 }

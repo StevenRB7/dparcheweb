@@ -85,7 +85,7 @@
             <button pill
              variant
              type="submit"
-             class="btn mt-3">Iniciar sesión
+             class="btn mt-3">Log in
             </button>
         </form>
         <div class="text-center fs-6">
