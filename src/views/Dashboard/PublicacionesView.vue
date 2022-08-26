@@ -2,7 +2,7 @@
 <template>
 <div class="cara2">
   <h1 class="contemelo text-primary">Publicaciones</h1>
-  <section class="contenedorinte">
+  <section class="cara2">
       <div class="control-label" align="center">
         <div class="input-group" style="width: 50%" align="center"> 
              
@@ -154,6 +154,9 @@ function eliminar(id){
 
 <style scoped>
 .size{
-  width: 50px;
+  /* width: 50px; */
+}
+.cara2{
+  margin-left: 90px;
 }
 </style>

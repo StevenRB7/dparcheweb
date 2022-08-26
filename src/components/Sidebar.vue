@@ -81,7 +81,9 @@ export default {
 <style scoped>
 
 .rounded-circle{
-    margin-top: -40px;}
+    margin-top: -40px;
+
+    }
 .row{
     color: rgb(255, 255, 255);
     font-family: "viner hand itc";
@@ -103,14 +105,14 @@ export default {
 }
 
 .menu-items > * {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .side-btn {
     border: none;
     padding: 16px 0px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 500;
     color: white;
     background-color: transparent;
