@@ -7,7 +7,7 @@
         <b-col md="12" class="py-3">
         </b-col>
       </b-row>
-      <h3 class="font-weight-bold text-primary">Tabla Publicaciones</h3>
+      <h3 class="font-weight-bold ">Tabla Publicaciones</h3>
     </b-container>
     <div class="table-responsive">
 <table class="table table-bordered " style="width: 80%"  align="center">

@@ -11,7 +11,7 @@
         <b-col md="12" class="py-3">
         </b-col>
       </b-row>
-      <h3 class="font-weight-bold text-primary">Intereses</h3>
+      <h3 class="font-weight-bold">Intereses</h3>
     </b-container>
     <table class="table table-bordered " style="width: 80%" align="center">
       <thead>
