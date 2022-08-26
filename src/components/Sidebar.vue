@@ -1,8 +1,33 @@
 <template>
 <div>
     <div class="sidebar">
+        <div>
+            <img
+            src="../assets/hac.png"
+            alt="Admin"
+            class="rounded-circle"
+            width="150"
+            />
+        </div>
         <div class="title">
-            DashBoard Developer
+        </div>
+        <div class="row">
+            <h5>Nombre</h5>
+        </div>
+        <div class="dato">
+            <h6 class="">{{nombre}}</h6>
+        </div>
+         <div class="row">
+            <h5>Apellido</h5>
+        </div>
+        <div class="dato">
+            <h6 class="">{{apellido}}</h6>
+        </div>
+         <!-- <div class="row">
+            <h5>Rol</h5>
+        </div> -->
+        <div class="dato">
+            <h6 class="">{{rol}}</h6>
         </div>
         <div class="menu-items">
             <router-link to="/dashboard" exact active-class="active"  tag="button"   class="side-btn">
@@ -43,10 +68,27 @@
 <script>
 export default {
 
+  data: () => ({
+    nombre: localStorage.getItem('nombre'),
+    apellido: localStorage.getItem('apellido')
+    // rol: localStorage.getItem('rol')
+
+  })
+
 }
 </script>
 
 <style scoped>
+
+.rounded-circle{
+    margin-top: -40px;}
+.row{
+    color: rgb(255, 255, 255);
+    font-family: "viner hand itc";
+}
+.dato{
+    font-family: "showcard gothic";
+}
 .title {
     color: white;
     font-size: 24px;
@@ -68,11 +110,13 @@ export default {
     border: none;
     padding: 16px 0px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 500;
     color: white;
     background-color: transparent;
     font-family: "Gloria Hallelujah";
+    font-family: "ink free";
+
 }
 
 .side-btn:focus {
@@ -82,7 +126,7 @@ export default {
 .side-btn.active {
     position: relative;
     background-color: white;
-    color: teal;
+    color: rgb(89, 165, 252);
     font-weight: 600;
     margin-left: 10px;
     border-radius: 30px 0 0 30px;
@@ -121,6 +165,6 @@ export default {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: teal;
+    background-color: rgb(89, 165, 252);
 }
 </style>

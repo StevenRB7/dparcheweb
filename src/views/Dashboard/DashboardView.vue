@@ -23,13 +23,13 @@ export default {
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    background-color: teal;
+    background-color: rgb(89, 165, 252) ;
     height: 100vh;
     width: 100vw;
 }
 
 .content {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin: 6px 6px 6px 0px;
 }
