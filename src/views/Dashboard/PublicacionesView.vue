@@ -1,49 +1,32 @@
-<template>
 <!-- eslint-disable -->
-  <div class="Empresas">
-    <HeaderComponent/>
- <b-container>
-      <b-row class="text-center">
-        <b-col md="12" class="py-3">
-        </b-col>
-      </b-row>
-      <h3 class="font-weight-bold text-primary">Tabla Publicaciones</h3>
-    </b-container>
-    <div class="table-responsive">
-<table class="table table-bordered " style="width: 80%"  align="center">
-      <thead>
-        <tr class="bg-primary text-white" >
-          <th >Id</th>
-          <th >Correo</th>
-          <th >Usuario</th>
-          <th >Categoria</th>
-          <th >Descripcion</th>
-          <th >Url de perfil</th>
-          <th >Fecha</th>
-          <th >Ubicacion</th>
-          <th >Url Img Publicacion</th>
-          <th >Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(user, index) in dataStatusGet" :key="index">
-          <td class="col-ms-4">{{ user.ides }}</td>
-          <td class="col-ms-4">{{ user.correoNom }}</td>
-          <td class="col-ms-4">{{ user.nomCorreo }}</td>
-          <td class="col-ms-4">{{ user.categorias }}</td>
-          <td class="col-ms-4">{{ user.descripciones }}</td>
-          <td class="col-ms-4">{{ user.fotoCorreo }}</td>
-          <td class="col-ms-4">{{ user.tiempo }}</td>
-          <td class="col-ms-4">{{ user.ubicacion }}</td>
-          <td class="col-ms-4">{{ user.url }}</td>
-          <td><button class="btn btn-danger" @click="eliminarDato(index)">Eliminar</button></td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    <FooterComponent />
-  </div>
-</template>
+
+<template>
+<div class="cara2">
+  <h1 class="contemelo text-primary">Publicaciones</h1>
+  <section class="contenedorinte">
+      <div class="control-label" align="center">
+        <div class="input-group" style="width: 50%" align="center"> 
+             
+             <b-form-input
+             v-model="filter"
+             type="search"
+             placeholder="Buscar Publicacion"
+             ></b-form-input>
+        </div>
+<br>
+</div>
+    <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
+       <!-- <template #cell(Acciones)="row">
+          
+          <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
+
+       </template> -->
+    </b-table>
+    <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
+  </section>
+</div>
+  
+</template>      
 
 <script>
 /* eslint-disable */
@@ -63,37 +46,29 @@ export default {
   },
 
   data() {
-    return {
-      slide: 0,
-      sliding: null,
-
-      usuarios: {
-        ides: "",
-        correoNom: "",
-        nomCorreo: "",
-        categorias: "",
-        descripciones: "",
-        fotoCorreo: "",
-        tiempo: "",
-        ubicacion: "",
-        url: "",
-      },
-
-      dataUsers: [],
+   return {
+      fields: [
+        {key: 'ides', label: 'Id',},
+        {key: 'correoNom', label: 'Usuario',},
+        {key: 'nomCorreo', label: 'Correo',},
+        {key: 'categorias', label: 'Categoria',},
+        {key: 'descripciones', label: 'Descripcion',},
+        {key: 'fotoCorreo', label: 'Img Perfil',},
+        {key: 'tiempo', label: 'Fecha',},
+        {key: 'ubicacion', label: 'Ubicacion',},
+        {key: 'url', label: 'Img Publicacion'},
+      ],
       dataStatusGet: [],
-
-      frases: {
-         id: "",
-         mensaje: "",
-      },
-      dataFrasesGet: [],
+      filter:null,
+      perPage: 4,
+      currentPage: 1,
     }
   },
-  // firestore(){
-  //     return {
-  //       Intereses: db.collection('Intereses'),
-  //     }
-  // },
+ computed: {
+   rows() {
+    return this.dataStatusGet.length;
+   }
+  }, 
   mounted(){
    this.getPublicaciones();
   },

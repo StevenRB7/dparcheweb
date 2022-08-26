@@ -1,42 +1,33 @@
-<template>
 <!-- eslint-disable -->
 
-  <div class="about mt-4">
-  <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"
-    />
- <b-container>
-      <b-row class="text-center">
-        <b-col md="12" class="py-3">
-        </b-col>
-      </b-row>
-      <h3 class="font-weight-bold text-primary">Intereses</h3>
-    </b-container>
-    <table class="table table-bordered " style="width: 80%" align="center">
-      <thead>
-        <tr class="bg-primary text-white" >
-          <th scope="col">Id</th>
-          <th scope="col">Usuario</th>
-          <th scope="col">Intereses</th>
-          <th scope="col">Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(user, index) in dataStatusGet" :key="index">
-          <td>{{ user.idCorreo }}</td>
-          <td>{{ user.usuario }}</td>
-          <td>{{ user.interes }}</td>
-           <!-- <td><button @click.prevent="eliminarDato(user.id)"
-          class="btn btn-danger">Eliminar
-        </button></td> -->
-          <td><button class="btn btn-danger" @click="eliminarDato(index)">Eliminar</button></td>
-          <!-- <td><button class="btn btn-danger" onclick="eliminar('${index}')">Eliminar</button></td> -->
-        </tr>
-      </tbody>
-    </table>  
-  </div>
-</template>
+<template>
+<div class="cara2">
+  <h1 class="contemelo text-primary">Intereses</h1>
+  <section class="contenedorinte">
+      <div class="control-label" align="center">
+        <div class="input-group" style="width: 50%" align="center"> 
+             
+             <b-form-input
+             v-model="filter"
+             type="search"
+             placeholder="Buscar Usuarios"
+             ></b-form-input>
+        </div>
+<br>
+</div>
+    <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
+       <!-- <template #cell(Acciones)="row">
+          
+          <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
+
+
+       </template> -->
+    </b-table>
+    <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
+  </section>
+</div>
+  
+</template>                           
 
 <script>
 /* eslint-disable */
@@ -57,23 +48,24 @@ export default {
 
   data() {
     return {
-      usuarios: {
-        mensaje: "",
-      },
-
- 
-      dataFrasesGet: [],
+      fields: [
+        {key: 'idCorreo', label: 'id',},
+        {key: 'usuario', label: 'Usuario',},
+        {key: 'interes', label: 'Interes'},
+      ],
       dataStatusGet: [],
+      filter:null,
+      perPage: 10,
+      currentPage: 1,
     }
   },
-  // firestore(){
-  //     return {
-  //       Intereses: db.collection('Intereses'),
-  //     }
-  // },
+  computed: {
+   rows() {
+    return this.dataStatusGet.length;
+   }
+  }, 
   mounted(){
     this.getStatus();
-    this.getFrases();
   },
 
   methods: {
@@ -93,24 +85,6 @@ export default {
 
         });
     },
-
-    async getFrases() {
-      axios
-        .get(
-          "https://deparche-51e93-default-rtdb.firebaseio.com/Frases.json?print=pretty"
-        )
-        .then((rows) => {
-          return rows.data;
-        })
-        .then((responseTwo) => {
-          this.dataFrasesGet = responseTwo;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-
-
     //  deleteProduct(user){
     //   db.collection("Intereses").doc(user).delete().then(() => {
     // console.log("Document successfully deleted!");
@@ -144,17 +118,17 @@ export default {
     //   router.go('/registroempresas')
     // },
 
-     eliminarDato(){
-      if(confirm("Are you sure you want to delete this document?")){
-         db.collection("Intereses").doc().delete().then(function() {
-         console.log("Document successfully deleted!");
-         }).catch(function(error) {
-         console.error("Error removing document: ", error);  
-         });
-      }else{
+    //  eliminarDato(){
+    //   if(confirm("Are you sure you want to delete this document?")){
+    //      db.collection("Intereses").doc().delete().then(function() {
+    //      console.log("Document successfully deleted!");
+    //      }).catch(function(error) {
+    //      console.error("Error removing document: ", error);  
+    //      });
+    //   }else{
 
-      }
-    },
+    //   }
+    // },
   },
    
 };
@@ -174,3 +148,25 @@ function eliminar(id){
      
     }
 </script>
+<style scoped>
+.py-3 {
+  color: rgb(255, 255, 255);
+  outline-color: rgb(100, 162, 255);
+}
+.btnlist {
+  color: rgb(255, 255, 255);
+  background-color: rgb(65, 119, 254);
+  border-color: blue;
+}
+.contenedorinte{
+  margin-top: 5%;
+}
+.contemelo{
+  margin-top: 60px;
+  text-shadow: -1px -1px 1px #aaa
+  0px 4px 1px rgba(0,0,0,0.5),
+  4px 4px 5px rgba(0,0,0,0.7),
+  0px 0px 7px rgba(0,0,0,0.4);
+  font-family: "snap itc";
+}
+</style>

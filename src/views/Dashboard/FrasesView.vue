@@ -27,7 +27,6 @@
         </tr>
       </tbody>
     </table>
-    <FooterComponent />
   </div>
 </template>
 
@@ -43,7 +42,7 @@ import { deleteDoc, doc } from 'firebase/firestore';
 
 
 export default {
-  name: "RegistroEmpresasView",
+  name: "FrasesView",
   components: {
     HeaderComponent,
   },

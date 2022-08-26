@@ -1,33 +1,33 @@
+<!-- eslint-disable -->
+
 <template>
-  <div class="home">
-    <HeaderComponent />
-    <b-container>
-      <b-row class="text-center">
-        <b-col md="12" class="py-3">
-        </b-col>
-      </b-row>
-      <h3 class="font-weight-bold text-primary">Estatos De Animo</h3>
-    </b-container>
-    <table class="table table-bordered " style="width: 80%" align="center">
-      <thead>
-        <tr class="bg-primary text-white" >
-          <th scope="col">Id</th>
-          <th scope="col">Usuario</th>
-          <th scope="col">Estado de Animo</th>
-          <th scope="col">Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(user, index) in dataStatusGet" :key="index">
-          <td>{{ user.idCorreo }}</td>
-          <td>{{ user.usuario }}</td>
-          <td>{{ user.estado }}</td>
-          <td><button class="btn btn-danger" @click="eliminarDato(index)">Eliminar</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</template>
+<div class="cara2">
+  <h1 class="contemelo text-primary">Estados de Animo</h1>
+  <section class="contenedorinte">
+      <div class="control-label" align="center">
+        <div class="input-group" style="width: 50%" align="center"> 
+             
+             <b-form-input
+             v-model="filter"
+             type="search"
+             placeholder="Buscar Usuarios"
+             ></b-form-input>
+        </div>
+<br>
+</div>
+    <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
+       <!-- <template #cell(Acciones)="row">
+          
+          <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
+
+
+       </template> -->
+    </b-table>
+    <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
+  </section>
+</div>
+  
+</template> 
 
 <script>
 /* eslint-disable */
@@ -45,39 +45,27 @@ export default {
   },
 
   data() {
-    return {
-      usuarios: {
-        id: "",
-        mail: "",
-        nombre: "",
-      },
-
-      dataUsers: [],
+   return {
+      fields: [
+        {key: 'idCorreo', label: 'id',},
+        {key: 'usuario', label: 'Usuario',},
+        {key: 'estado', label: 'Estado'},
+      ],
       dataStatusGet: [],
-    };
+      filter:null,
+      perPage: 10,
+      currentPage: 1,
+    }
   },
-
+  computed: {
+   rows() {
+    return this.dataStatusGet.length;
+   }
+  },
   mounted() {
-    this.verUsuarios();
     this.getStatus();
   },
   methods: {
-    verUsuarios() {
-      axios
-        .get(
-          "https://deparche-51e93-default-rtdb.firebaseio.com/User.json?print=pretty"
-        )
-        .then((rows) => {
-          return rows.data;
-        })
-        .then((responseTwo) => {
-          this.dataUsers = responseTwo;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-
     async getStatus() {
       let listStatus = [];
       db.collection("Estados De Animo")
@@ -106,5 +94,12 @@ export default {
   color: rgb(255, 255, 255);
   background-color: rgb(65, 119, 254);
   border-color: blue;
+}
+.contenedorinte{
+  margin-top: 5%;
+}
+.contemelo{
+  margin-top: 60px;
+  font-family: "snap itc";
 }
 </style>
