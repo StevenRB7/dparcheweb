@@ -10,7 +10,7 @@
       <h3 class="font-weight-bold text-primary">Tabla Publicaciones</h3>
     </b-container>
     <div class="table-responsive">
-<table class="table table-bordered " style="width: 80%"  align="center">
+<table  class="table table-bordered " style=" width: 80%"  align="center">
       <thead>
         <tr class="bg-primary text-white" >
           <th >Id</th>

@@ -72,6 +72,7 @@ export default {
     font-weight: 500;
     color: white;
     background-color: transparent;
+    font-family: "Gloria Hallelujah";
 }
 
 .side-btn:focus {
