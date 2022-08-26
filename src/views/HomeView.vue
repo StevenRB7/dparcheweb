@@ -48,7 +48,7 @@
         </div>
         <div class="col-md-6 div2   " id="about">
           <div class="content div2">
-            <h3>Comunidad D'PARCHE</h3>
+            <h3 class="let">Comunidad D'PARCHE</h3>
 
             <hr class="hr"/>
             <p> Generar con la ayuda de herramientas TIC espacios dedicados a mejorar la salud mental de las personas y economía.</p>
@@ -58,7 +58,7 @@
       </div>
       <div class="container recent" id="act">
         <div class="row">
-          <h2>Actividades</h2>
+          <h2 class="let">Actividades</h2>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
               <div class="fo card"> <img class="" src="../assets/activida3.jpg" alt="">
@@ -143,7 +143,7 @@
 <br>
  <div class="container  recent" id="categoria">
         <div class="arow">
-          <h2 class="cate">Categoria</h2>
+          <h2 class="let cate">Categoria</h2>
           <br><br>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
@@ -217,7 +217,7 @@
     <div class="container align-items-center">
       <div class="row mb-5 pb-5">
       </div>
-      <h2 class="text-center d-block">NOS PUEDES ENCONTRAR EN</h2>
+      <h2 class="let text-center d-block">Nos pueden encontrar en</h2>
       <!-- <div class="row social-links">
         <ul class="nav mx-auto">
           <li class="nav-item"> <a class="nav-link" href=""><img src="assets/img/facebook.png" alt=""></a> </li>
@@ -339,7 +339,9 @@ export default {
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
-
+.let{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 /* estilos contactanos */
 
 .contact-pop {
@@ -629,6 +631,7 @@ element.style {
 }
 .cate{
       margin-left: 468px;
+      
 }
 .arow {
     display: -ms-flexbox;
@@ -660,7 +663,6 @@ div {
     /* color de letras */
     .navbar-nav li .nav-link {
       
-    font-family: "PT-Sans-Bold";
     font-size: 16px;
     text-transform: uppercase;
     padding: 15px 25px;

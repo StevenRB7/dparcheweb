@@ -1,5 +1,4 @@
 <!-- eslint-disable -->
-
 <template>
 <div class="cara2">
   <h1 class="contemelo text-primary">Intereses</h1>

@@ -1,5 +1,4 @@
 <!-- eslint-disable -->
-
 <template>
 <div class="cara2">
   <h1 class="contemelo text-primary">Publicaciones</h1>
@@ -27,7 +26,6 @@
 </div>
   
 </template>      
-
 <script>
 /* eslint-disable */
 // @ is an alias to /src

@@ -68,8 +68,8 @@
         <div class="logo">
             <img src="../assets/dparchea_1000.png" alt="">
         </div>
-        <div class="text-center mt-4 name">
-            Hola developer
+        <div class="hi text-center mt-4 name">
+             Hi developer
         </div>
         <form class="p-3 mt-3" @submit.prevent="Login()">
             <div class="form-field d-flex align-items-center">
@@ -85,7 +85,7 @@
             <button pill
              variant
              type="submit"
-             class="btn mt-3">Iniciar sesión
+             class="btn mt-3">Log in
             </button>
         </form>
         <div class="text-center fs-6">
@@ -195,7 +195,9 @@ export default {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.hi{
+  font-family: "algerian";
+}
 .wrapper {
     max-width: 350px;
     min-height: 500px;
@@ -423,4 +425,5 @@ body{
     }
 
 }
+
 </style>
