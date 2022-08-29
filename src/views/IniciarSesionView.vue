@@ -143,9 +143,7 @@ export default {
         },
       };
       axios
-        .post(
-          "https://interbusapi.herokuapp.com/usuarios/login",
-          this.form,
+        .post("https://interbusapi.herokuapp.com/usuarios/login",this.form,
           {
             validateStatus: function (status) {
               return status < 500; // Resuelve solo si el código de estado es menor que 500

@@ -10,7 +10,7 @@
       <h3 class="font-weight-bold">Usuarios</h3>
     </b-container>
 
-<table class="table table-bordered " style="width: 80%" align="center">
+<table class="table table-bordered " style="width: 80%" align="center" >
       <thead>
         <tr class="bg-primary text-white" >
           <th scope="col">Id</th>
@@ -28,6 +28,7 @@
         </tr>
       </tbody>
     </table>
+
   </div>
 </template>
 
@@ -53,26 +54,10 @@ data () {
       slide: 0,
       sliding: null,
 
-      usuarios: {
-        ides: "",
-        correoNom: "",
-        nomCorreo: "",
-        categorias: "",
-        descripciones: "",
-        fotoCorreo: "",
-        tiempo: "",
-        ubicacion: "",
-        url: "",
-      },
 
       dataUsers: [],
-      dataStatusGet: [],
-
-      frases: {
-         id: "",
-         mensaje: "",
-      },
-      dataFrasesGet: [],
+      perPage: 5,
+      currentPage: 1,
     }
   },
   // firestore(){
@@ -83,7 +68,11 @@ data () {
   mounted(){
    this.verUsuarios();
   },
-
+ computed: {
+   rows() {
+    return this.dataUsers.length;
+   }
+  },
   methods: {
    verUsuarios() {
       axios
@@ -164,4 +153,3 @@ function eliminar(id){
      
     }
 </script>
-

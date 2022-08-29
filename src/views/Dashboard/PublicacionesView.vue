@@ -47,8 +47,8 @@ export default {
    return {
       fields: [
         {key: 'ides', label: 'Id',},
-        {key: 'correoNom', label: 'Usuario',},
-        {key: 'nomCorreo', label: 'Correo',},
+        {key: 'correoNom', label: 'Correo',},
+        {key: 'nomCorreo', label: 'Usuario',},
         {key: 'categorias', label: 'Categoria',},
         {key: 'descripciones', label: 'Descripcion',},
         {key: 'fotoCorreo', label: 'Img Perfil',},
