@@ -142,8 +142,8 @@
 <br>
 <br>
  <div class="container  recent" id="categoria">
+  <h2 class="let  container">Categoria</h2>
         <div class="arow">
-          <h2 class="let  container">Categoria</h2>
           <br><br>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
@@ -227,7 +227,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <ul class="redes">
           <li class="redes2">
-            <a href="https://es-la.facebook.com/"  target="_blank">
+            <a href="https://web.facebook.com/DParche-112064994962334"  target="_blank">
               <span></span>
               <span></span>
               <span></span>
@@ -631,16 +631,9 @@ element.style {
 .arow {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 100px;
   }
 
-user agent stylesheet
-
-.divv {
-    display: flex;
-    flex-wrap: wrap;
-
-
-  }
     /* color de letras */
     .navbar-nav li .nav-link {
       
