@@ -12,21 +12,21 @@
         </div>
       </div>
       <div class="col-sm-6 pr-0 pl-0  div1">
-        <div class="card"> <img class="card-img" src="../assets/inici2.jpg" alt="">
+        <div class="card"> <img class="card-img" src="../assets/inici3.jpg" alt="">
           <div class="card-img-overlay"> </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div >
-  <nav class="header navbar navbar-expand-md  fixed-top maine-menu">
-    <div class="container">
+  <div>
+  <nav class="header navbar navbar-expand  fixed-top maine-menu">
+    <div class="container divv">
       <button class="navbar-toggler ml-auto" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"> <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span> </button>
       <div id="my-nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav mx-auto">
+        <ul class=" navbar-nav mx-auto">
 
-          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Inicio</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#inicio" tabindex="-1" aria-disabled="true">Inicio</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a></li>
           <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
           <li class="nav-item"> <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a></li>
@@ -46,7 +46,7 @@
             <div class="card-img-overlay"> </div>
           </div>
         </div>
-        <div class="col-md-6 div2   " id="about">
+        <div class="col-md-6 div2   " id="inicio">
           <div class="content div2">
             <h3 class="let">Comunidad D'PARCHE</h3>
 
@@ -56,10 +56,10 @@
           </div>
         </div>
       </div>
+      <h2 class="let container">Actividades</h2>
       <div class="container recent" id="act">
         <div class="row">
-          <h2 class="let">Actividades</h2>
-          <div class="owl-carousel owl-carousel2 owl-theme d-flex">
+          <div class="container owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
               <div class="fo card"> <img class="" src="../assets/activida3.jpg" alt="">
                 <div class="card-img-overlay"> <a href="#"></a>
@@ -142,8 +142,8 @@
 <br>
 <br>
  <div class="container  recent" id="categoria">
+  <h2 class="let  container">Categoria</h2>
         <div class="arow">
-          <h2 class="let cate">Categoria</h2>
           <br><br>
           <div class="owl-carousel owl-carousel2 owl-theme d-flex">
             <div>
@@ -188,7 +188,7 @@
             </div>
             </div>
             <div>
-              <div class="fo card"> <img class="" src="../assets/motel.jpg" alt="">
+              <div class="fo card"> <img class="" src="../assets/imgmotel.jpg" alt="">
                 <div class="card-img-overlay"> <a href="#"></a>
                   <div class="bottom-text">
                     <h5 class="card-title">Moteles</h5>
@@ -217,20 +217,17 @@
     <div class="container align-items-center">
       <div class="row mb-5 pb-5">
       </div>
-      <h2 class="let text-center d-block">Nos pueden encontrar en</h2>
-      <!-- <div class="row social-links">
-        <ul class="nav mx-auto">
-          <li class="nav-item"> <a class="nav-link" href=""><img src="assets/img/facebook.png" alt=""></a> </li>
-          <li class="nav-item"> <a class="nav-link" href=""><img src="assets/img/twitter.png" alt=""></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#"><img src="assets/img/google-plus.png" alt=""></a> </li>
-        </ul>
-      </div> -->
+      <h4 class="let text-center">
+        Si quieres que tu evento sea publicado en nuestra aplicación
+        nos puedes mandar tu evento en los siguientes enlaces:</h4>
+        <hr>
+        <br>
       <div class="d-block " id="contact">
-      <div class="iconos1 ">
+      <div class="iconos1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <ul class="redes">
           <li class="redes2">
-            <a href="https://es-la.facebook.com/"  target="_blank">
+            <a href="https://web.facebook.com/DParche-112064994962334"  target="_blank">
               <span></span>
               <span></span>
               <span></span>
@@ -341,6 +338,7 @@ export default {
     }
 .let{
   font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 /* estilos contactanos */
 
@@ -629,37 +627,13 @@ export default {
 
 element.style {
 }
-.cate{
-      margin-left: 468px;
-      
-}
+
 .arow {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
     margin-left: 100px;
-}
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-* {
-    margin: 0;
-    padding: 0;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-user agent stylesheet
-div {
-    display: block;
-}
+  }
+
     /* color de letras */
     .navbar-nav li .nav-link {
       
@@ -688,26 +662,32 @@ div {
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s; }
+
+
     .recent .card .card-img {
-      width: 250px;
-      margin: 250px;
-      border-radius: 15px; }
-      
+      border-radius: 15px; 
+      display: flex;
+    }
+
+    /* .recent{
+      display: contents;
+    }
+       */
 
     .recent .card h5 {
-      
+
       font-size: 20px;
       color: rgb(255, 255, 255);
       margin-bottom: 200px; 
       }
 
     .recent .card p {
-      
+
       font-size: 15px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       color: transparent }
     .recent .card.active, .recent .card:hover {
-      
+
       transform: scale(1.05, 1.1);
       -webkit-transform: scale(1.05, 1.1);
       -ms-transform: scale(1.05, 1.1);
@@ -715,12 +695,13 @@ div {
       box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25); }
       
       .recent .card.active .card-img-overlay, .recent .card:hover .card-img-overlay {
-        
+
         background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
         background: -moz-linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
         background: linear-gradient(rgba(0, 0, 0, 0.3),#559FE0);
         background: -ms-linear-gradient(rgba(0, 0, 0, 0.3),#559FE0); }
       .recent .card.active p, .recent .card:hover p {
+
         color: #ffffff; }
 .clickme-text {
   
@@ -758,10 +739,6 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-
-h3 {
-  margin: 40px 0 0;
 }
 
 
