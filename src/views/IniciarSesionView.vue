@@ -74,18 +74,17 @@
         <form class="p-3 mt-3" @submit.prevent="Login()">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
-                <input type="text" v-model="form.email" name="email" id="email" placeholder="email">
+                <input type="text" v-model="form.email" name="email" id="email" placeholder="Email">
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
                 <input type="password" v-model="form.clave" name="clave" id="clave" placeholder="Password">
                 <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
             </div>
-            <h10>¿Olvidaste tu contraseña?</h10>
             <button pill
              variant
              type="submit"
-             class="btn mt-3">Log in
+             class="btn mt-3">Iniciar Sesion
             </button>
         </form>
         <div class="text-center fs-6">

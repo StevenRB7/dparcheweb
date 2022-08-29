@@ -159,4 +159,8 @@ function eliminar(id){
 .cara2{
   margin-left: 90px;
 }
+.contemelo{
+  margin-top: 60px;
+  font-family: "snap itc";
+}
 </style>

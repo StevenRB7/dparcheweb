@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="col-sm-6 pr-0 pl-0  div1">
-        <div class="card"> <img class="card-img" src="../assets/inici2.jpg" alt="">
+        <div class="card"> <img class="card-img" src="../assets/inici3.jpg" alt="">
           <div class="card-img-overlay"> </div>
         </div>
       </div>
