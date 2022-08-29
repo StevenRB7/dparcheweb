@@ -88,7 +88,7 @@
             </button>
         </form>
         <div class="text-center fs-6">
-            <!-- <a href="#">Forget password?</a> or <a href="#">Sign up</a> -->
+            <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
     </div>
 </ul>
