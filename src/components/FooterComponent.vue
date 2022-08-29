@@ -1,56 +1,22 @@
 <template>
   <div>
     <footer>
-      <div class="">
+
 <div id="nosotros">
-    <div class="row mr-0 ml-0">
-      <div class="col-md-6 pr-0 pl-0 map">
+    <div class=" container-fluid">
+      <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0733013783824!2d-76.56465938482123!3d2.4826874981908746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e300410eb607c65%3A0x614545787e90bea6!2sSENA!5e0!3m2!1ses-419!2sco!4v1660662008619!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 </div>
-<!-- <div class="iconos1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <ul>
-    <li>
-      <a href="https://es-la.facebook.com/"  target="_blank">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span  class="fa fa-facebook"></span>
-      </a>
-    </li>
-    <li>
-      <a href="https://wa.me/message/EKPS4PAESNM4L1"  target="_blank">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span  class="fa fa-whatsapp"></span>
-      </a>
-    </li>
-
-    <li>
-      <a href="https://www.instagram.com/" target="_blank">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span  class="fa fa-instagram"></span>
-      </a>
-    </li>
-  </ul>
-
-</div> -->
 
 <br>
-        <h3 class="d">D'Parche</h3>
-        <h6><router-link class="sj d" to="/">Contactanos: 3163514576</router-link></h6>
+        <h3 class="d">D'PARCHE</h3>
+        <h6><a href="https://wa.me/message/EKPS4PAESNM4L1" class="sj d"> Contactanos: 3245708819</a></h6>
         <h6 class="d">La Paciencia Es Una Gran Virtud</h6>
-      </div>
-      <div class="footer-bottom ">
-        <p class="d" href="/" to="/" >copyright &copy;2022 @D'Parche. </p>
+
+      <div class="footer-bottom">
+        <p class="d">copyright &copy;2022 @D'Parche. </p>
       </div>
     </footer>
   </div>
@@ -121,100 +87,5 @@ footer {
 }
 .d{
 margin-left: 50px;}
-
-/*  aplicaciones*/
-*{
-      margin: 0;
-      padding: 0;
-    }
-.iconos1{
-display: flex;
-}
-    ul{
-      position: relative;
-      display: contents;
-      transform-style: preserve-3d;
-      transform: rotate(-25deg) skew(25deg);
-    }
-    ul li{
-      position: relative;
-      list-style: none;
-      width: 60px;
-      height: 60px;
-      margin: 0 10px;
-    }
-    ul li::before{
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 10px;
-      background: #333;
-      transform-origin: top;
-      transform: skewX(-41deg);
-    }
-    ul li::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -9px;
-      width: 9px;
-      height: 100%;
-      background: #333;
-      transform-origin: right;
-      transform: skewY(-49deg);
-    }
-    ul li span{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-      background: #2a2a2a;
-      color: rgb(251, 248, 248);
-      font-size: 30px !important;
-      transition: 0.2s;
-    }
-    ul li:hover span{
-      z-index: 1000;
-      transition: 0.5s;
-      color: #fff;
-      box-shadow: -1px 1px 1px rgba(103, 18, 18, 0.05);
-    }
-    ul li:hover span:nth-child(5){
-      transform: translate(40px, -40px);
-      opacity: 1;
-    }
-    ul li:hover span:nth-child(4){
-      transform: translate(30px, -30px);
-      opacity: 0.8;
-    }
-    ul li:hover span:nth-child(3){
-      transform: translate(20px, -20px);
-      opacity: 0.6;
-    }
-    ul li:hover span:nth-child(2){
-      transform: translate(10px, -10px);
-      opacity: 0.4;
-    }
-    ul li:hover span:nth-child(1){
-      transform: translate(0px, 0px);
-      opacity: 0.2;
-    }
-    ul li:nth-child(1):hover span{
-      background: #3b5999;
-    }
-
-    ul li:nth-child(2):hover span{
-      background: #25d366;
-    }
-
-    ul li:nth-child(3):hover span{
-      background: #e4405f;
-    }
 
 </style>
