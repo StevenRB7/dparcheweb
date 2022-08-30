@@ -1,5 +1,5 @@
 <!-- eslint-disable -->
-<template>
+<template class="body">
 
 <div class="cara2">
 
@@ -168,5 +168,7 @@ function eliminar(id){
   margin-top: 30px;
   font-family: "snap itc";
 }
-
+.cara3{
+  width: 100%;
+}
 </style>
