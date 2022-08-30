@@ -1,8 +1,10 @@
 <!-- eslint-disable -->
 <template>
+
 <div class="cara2">
+
   <h1 class="contemelo text-primary">Publicaciones</h1>
-  <section class="cara2">
+  <section class="cara3">
       <div class="control-label" align="center">
         <div class="input-group" style="width: 50%" align="center"> 
              
@@ -14,7 +16,8 @@
         </div>
 <br>
 </div>
-    <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
+<div>
+    <b-table sm v-bind="estilos" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" style="width: 80%" >
        <!-- <template #cell(Acciones)="row">
           
           <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
@@ -22,6 +25,7 @@
        </template> -->
     </b-table>
     <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
+    </div>
   </section>
 </div>
   
@@ -45,6 +49,9 @@ export default {
 
   data() {
    return {
+    estilos:{
+     responsive: true
+    },
       fields: [
         {key: 'ides', label: 'Id',},
         {key: 'correoNom', label: 'Correo',},
@@ -153,14 +160,13 @@ function eliminar(id){
 </script>
 
 <style scoped>
-.size{
-  /* width: 50px; */
-}
 .cara2{
-  margin-left: 90px;
+  margin-left: 120px;
+  width: 80%;
 }
 .contemelo{
-  margin-top: 60px;
+  margin-top: 30px;
   font-family: "snap itc";
 }
+
 </style>

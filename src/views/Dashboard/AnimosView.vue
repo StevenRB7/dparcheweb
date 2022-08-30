@@ -15,7 +15,7 @@
         </div>
 <br>
 </div>
-    <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
+    <b-table responsive="sm" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table melo" style="width: 80%" align="center" >
        <!-- <template #cell(Acciones)="row">
           
           <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
@@ -46,7 +46,7 @@ export default {
   data() {
    return {
       fields: [
-        {key: 'idCorreo', label: 'id',},
+        {key: 'idCorreo', label: 'id', _rowVariant: 'success'},
         {key: 'usuario', label: 'Usuario',},
         {key: 'estado', label: 'Estado'},
       ],
@@ -101,4 +101,9 @@ export default {
   margin-top: 60px;
   font-family: "snap itc";
 }
+.cara2{
+  margin-left: 180px;
+  width: 100%;
+}
+
 </style>

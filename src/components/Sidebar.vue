@@ -60,10 +60,10 @@
                    Frases
                 </div>
             </router-link>
-             <router-link to="/iniciar" class="button" @click.native="cerrarSesion()">
+             <!-- <router-link to="/iniciar" class="button" @click.native="cerrarSesion()">
                <span class="material-icons">Logout</span>
                <span class="text mx-4">Salir</span>
-            </router-link>
+            </router-link> -->
         </div>
     </div>
     </div>

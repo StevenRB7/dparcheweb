@@ -9,7 +9,7 @@
       </b-row>
       <h3 class="font-weight-bold">Frases</h3>
     </b-container>
-<table class="table table-bordered " style="width: 80%" align="center">
+<table id="tabla_frases" class="table table-bordered " style="width: 90%" align="center">
       <thead>
         <tr class="bg-primary text-white" >
           <th scope="col">Id</th>
@@ -55,7 +55,6 @@ export default {
 
  
       dataFrasesGet: [],
-      dataStatusGet: [],
     }
   },
   // firestore(){
@@ -64,28 +63,10 @@ export default {
   //     }
   // },
   mounted(){
-    this.getStatus();
     this.getFrases();
   },
 
   methods: {
-    async getStatus() {
-      let listStatus = [];
-      db.collection("Intereses")
-        .get()
-        .then(function (result) {
-          result.forEach(function (status) {
-            listStatus.push(status.data());
-          });
-          return listStatus;
-        })
-        .then((response) => {
-          console.table(response);
-        this.dataStatusGet = response;
-
-        });
-    },
-
     async getFrases() {
       axios
         .get(
@@ -96,6 +77,18 @@ export default {
         })
         .then((responseTwo) => {
           this.dataFrasesGet = responseTwo;
+           $(document).ready(function () {
+            $("#tabla_frases").DataTable({
+              pageLength: 8,
+              lengthMenu: [8,10],
+              paging: true,
+              searching: true,
+              lenguaje: {
+                sInfo: "Mostrando registros del _START_ al _END_",
+                url: "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+              },
+            });
+          });
         })
         .catch((error) => {
           console.log(error);
