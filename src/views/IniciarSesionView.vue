@@ -97,17 +97,19 @@
                   v-model="form.clave"
                 />
               </div>
+              <!-- <b-icon animation="eye-fill"></b-icon> -->
               <div class="control">
                 <button class="button" @click="toggleShow">
-                  <span class="icon is-small is-right">
+                  <img src="../assets/ver.png" alt="">
+                  <!-- <span class="icon is-small is-right"> -->
                     <i
                       class="fas"
                       :class="{
-                        'fa-eye-slash': showPassword,
-                        'fa-eye': !showPassword,
+                        // 'fa-eye-slash': showPassword,
+                        // 'fa-eye': !showPassword,
                       }"
                     ></i>
-                  </span>
+                  <!-- </span> -->
                 </button>
               </div>
               <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
@@ -466,8 +468,5 @@ label {
   width: 100%;
 }
 
-input {
-  width: 100%;
-  padding: 7px;
-}
+
 </style>
