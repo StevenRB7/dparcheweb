@@ -98,7 +98,7 @@
                 />
               </div>
               <!-- <b-icon animation="eye-fill"></b-icon> -->
-              <div class="control">
+              <div class="controll">
                 <button class="button" @click="toggleShow">
                   <img src="../assets/ver.png" alt="">
                   <!-- <span class="icon is-small is-right"> -->
@@ -112,6 +112,7 @@
                   <!-- </span> -->
                 </button>
               </div>
+
               <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
             </div>
             <button pill variant  @click="Login()" class="btn mt-3">
@@ -466,6 +467,9 @@ body {
 
 label {
   width: 100%;
+}
+.button{
+  border-radius: 10px;
 }
 
 
