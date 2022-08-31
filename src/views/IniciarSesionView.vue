@@ -97,10 +97,8 @@
                   v-model="form.clave"
                 />
               </div>
-              <!-- <b-icon animation="eye-fill"></b-icon> -->
               <div class="controll">
-                <button class="button" @click="toggleShow">
-                  <img src="../assets/ver.png" alt="">
+                  <img src="../assets/ver.png" alt="" button class="button" @click="toggleShow">
                   <!-- <span class="icon is-small is-right"> -->
                     <i
                       class="fas"
@@ -110,7 +108,6 @@
                       }"
                     ></i>
                   <!-- </span> -->
-                </button>
               </div>
 
               <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
@@ -471,6 +468,7 @@ label {
 .button{
   border-radius: 10px;
 }
+
 
 
 </style>
