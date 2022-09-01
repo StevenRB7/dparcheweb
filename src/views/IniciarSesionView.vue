@@ -95,6 +95,7 @@
                   type="password"
                   class="input"
                   v-model="form.clave"
+                  placeholder="Password"
                 />
               </div>
               <div class="controll">

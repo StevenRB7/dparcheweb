@@ -45,16 +45,18 @@
       <i class="fas fa-chess"  @click="Intereses()"></i>
       <i class="fas fa-chalkboard-teacher" @click="Publicaciones()"></i>
       <i class="fas fa-user-circle"  @click="Usuarios()"></i>
+      <i class="fas fa-futbol"  @click="Eventos2()"></i>
 
     </div>
     <div class="navigation-links">
       <transition-group name="fade">
         <div v-show="showLink" @click="Animos()" key="1">Estados de animo</div>
-        <div v-show="showLink" @click="Eventos()" key="2">Eventos</div>
+        <div v-show="showLink" @click="Eventos()" key="2">Crear Eventos</div>
         <div v-show="showLink" @click="Frases()" key="3">Frases</div>
         <div v-show="showLink" @click="Intereses()" key="4">Intereses</div>
         <div v-show="showLink" @click="Publicaciones()" key="5">Publicaciones</div>
         <div v-show="showLink" @click="Usuarios()" key="5">Usuarios</div>
+        <div v-show="showLink" @click="Eventos2()" key="5">Eventos</div>
 
       </transition-group>
     </div>
@@ -96,6 +98,9 @@ export default {
     },
     Usuarios () {
       this.$router.push('/usuarios')
+    },
+    Eventos2 () {
+      this.$router.push('/eventos2')
     },
 
     showNav () {
