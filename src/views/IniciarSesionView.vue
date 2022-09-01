@@ -467,6 +467,7 @@ label {
 }
 .button{
   border-radius: 10px;
+  cursor: pointer;
 }
 
 

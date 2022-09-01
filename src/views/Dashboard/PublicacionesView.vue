@@ -162,7 +162,7 @@ function eliminar(id){
 <style scoped>
 .cara2{
   margin-left: 120px;
-  width: 80%;
+  width: 110%;
 }
 .contemelo{
   margin-top: 30px;
