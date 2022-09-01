@@ -95,21 +95,22 @@
                   type="password"
                   class="input"
                   v-model="form.clave"
-                />
+                  placeholder="Password">
               </div>
-              <div class="control">
-                <button class="button" @click="toggleShow">
+              <div class="controll">
+                  <!-- <img src="../assets/ver.png" alt="" button class="button" @click="toggleShow"> -->
                   <span class="icon is-small is-right">
                     <i
                       class="fas"
+                      button  @click="toggleShow"
                       :class="{
                         'fa-eye-slash': showPassword,
                         'fa-eye': !showPassword,
                       }"
                     ></i>
                   </span>
-                </button>
               </div>
+
               <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
             </div>
             <button pill variant  @click="Login()" class="btn mt-3">
@@ -465,9 +466,11 @@ body {
 label {
   width: 100%;
 }
-
-input {
-  width: 100%;
-  padding: 7px;
+.button{
+  border-radius: 10px;
+  cursor: pointer;
 }
+
+
+
 </style>

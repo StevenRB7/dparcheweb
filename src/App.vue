@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <router-view/>
+<router-view/>
   </div>
 </template>
 
 <style>
+
 #app {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +29,6 @@ nav a.router-link-exact-active {
 body {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   overflow-x: hidden;
 }
 </style>

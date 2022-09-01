@@ -1,7 +1,12 @@
+<!-- eslint-disable quotes -->
+/* eslint-disable */
 <template>
-<div>
+  <div class="container" :class="{ show: showSidebar }">
+    <div class="control">
+      <i class="fas fa-angle-double-right" @click="showNav"></i>
+    </div>
     <div class="sidebar">
-        <div>
+        <div v-show="showLink">
             <img
             src="../assets/hac.png"
             alt="Admin"
@@ -9,6 +14,7 @@
             width="150"
             />
         </div>
+        <div v-show="showLink">
         <div class="title">
         </div>
         <div class="row">
@@ -29,65 +35,193 @@
         <div class="dato">
             <h6 class="">{{rol}}</h6>
         </div>
-        <div class="menu-items">
-            <router-link to="/dashboard" exact active-class="active"  tag="button"   class="side-btn">
-                <div class="link-container">
-                    Publicaciónes
-                </div>
-            </router-link>
-            <router-link to="/eventos" exact active-class="active"   tag="button"   class="side-btn">
-                <div class="link-container">
-                    Eventos
-                </div>
-            </router-link>
-            <router-link to="/animos"  exact  active-class="active"  tag="button"  class="side-btn">
-                <div class="link-container">
-                    Estados de animo
-                </div>
-            </router-link>
-            <router-link to="/intereses"  exact active-class="active"  tag="button"   class="side-btn">
-                <div class="link-container">
-                    Intereses
-                </div>
-            </router-link>
-            <router-link to="/usuarios"  exact active-class="active"  tag="button"   class="side-btn">
-                <div class="link-container">
-                    Usuarios
-                </div>
-            </router-link>
-            <router-link to="/frases"  exact active-class="active"  tag="button"   class="side-btn">
-                <div class="link-container">
-                   Frases
-                </div>
-            </router-link>
-             <!-- <router-link to="/iniciar" class="button" @click.native="cerrarSesion()">
-               <span class="material-icons">Logout</span>
-               <span class="text mx-4">Salir</span>
-            </router-link> -->
-        </div>
+      </div>
+        <br><br>
     </div>
+    <div class="navigation-icons">
+      <i class="fas fa-grin-alt" @click="Animos()"></i>
+      <i class="fas fa-skating"  @click="Eventos()"></i>
+      <i class="fas fa-file-alt"  @click="Frases()"></i>
+      <i class="fas fa-chess"  @click="Intereses()"></i>
+      <i class="fas fa-chalkboard-teacher" @click="Publicaciones()"></i>
+      <i class="fas fa-user-circle"  @click="Usuarios()"></i>
+      <i class="fas fa-futbol"  @click="Eventos2()"></i>
+
     </div>
+    <div class="navigation-links">
+      <transition-group name="fade">
+        <div v-show="showLink" @click="Animos()" key="1">Estados de animo</div>
+        <div v-show="showLink" @click="Eventos()" key="2">Crear Eventos</div>
+        <div v-show="showLink" @click="Frases()" key="3">Frases</div>
+        <div v-show="showLink" @click="Intereses()" key="4">Intereses</div>
+        <div v-show="showLink" @click="Publicaciones()" key="5">Publicaciones</div>
+        <div v-show="showLink" @click="Usuarios()" key="5">Usuarios</div>
+        <div v-show="showLink" @click="Eventos2()" key="5">Eventos</div>
+
+      </transition-group>
+    </div>
+  </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
-
   data: () => ({
+    showSidebar: false,
+    showLink: false,
     nombre: localStorage.getItem('nombre'),
     apellido: localStorage.getItem('apellido')
     // rol: localStorage.getItem('rol')
+  }),
+  // dataa: () => {
+  //   // return {
+  //   //   showSidebar: false,
+  //   //   showLink: false
+  //   // }
+  // },
+  methods: {
 
-  })
+    Animos () {
+      this.$router.push('/animos')
+    },
+    Eventos () {
+      this.$router.push('/eventos')
+    },
+    Frases () {
+      this.$router.push('/frases')
+    },
+    Intereses () {
+      this.$router.push('/intereses')
+    },
+    Publicaciones () {
+      this.$router.push('/dashboard')
+    },
+    Usuarios () {
+      this.$router.push('/usuarios')
+    },
+    Eventos2 () {
+      this.$router.push('/eventos2')
+    },
 
+    showNav () {
+      if (this.showSidebar) {
+        this.showLink = false
+        setTimeout(() => {
+          this.showSidebar = false
+        }, 500)
+      } else {
+        this.showSidebar = true
+        setTimeout(() => {
+          this.showLink = true
+        }, 500)
+      }
+    }
+  },
+
+  // dataa: () => {
+  //   return {
+  //     showSidebar: false,
+  //     showLink: false
+  //   }
+  // }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.container {
+  position: absolute;
+  box-sizing: content-box;
+  top: 0;
+  left: 0;
+  width: 50px;
+  padding: 10px;
+  min-height: calc(100vh - 20px);
+  background-color: rgba($color: #3fbeef, $alpha: 0.8);
+  border: solid #fff;
+  border-width: 0 1px 0 0;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
 
-.rounded-circle{
-    margin-top: -40px;
+  .control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin-bottom: 10px;
 
+    i {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
     }
+  }
+
+  &.show {
+    width: 250px;
+
+    .control > i {
+      color: #fff;
+      transform: rotateZ(-180deg);
+    }
+
+    .navigation-icons {
+      color: #fff;
+    }
+  }
+
+  .navigation-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50px;
+    float: left;
+
+    i {
+      font-size: 2rem;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .navigation-links {
+    padding-top: 14px;
+    float: left;
+
+    div {
+      font-size: 1.35rem;
+      padding-left: 10px;
+      margin-bottom: 18px;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@mixin nav-childs($values...) {
+  @each $var in $values {
+    &:nth-child(#{$var}) {
+      transition: transform linear calc(0.1s * #{$var}), display 0.5s;
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  @include nav-childs(1, 2, 3, 4, 5);
+}
+.fade-enter,
+.fade-leave-to {
+  transform: scale(0);
+}
 .row{
     color: rgb(255, 255, 255);
     font-family: "viner hand itc";
@@ -101,75 +235,4 @@ export default {
     margin-top: 10px;
 }
 
-.menu-items {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    margin-left: 6px;
-}
-
-.menu-items > * {
-    margin-top: 20px;
-}
-
-.side-btn {
-    border: none;
-    padding: 16px 0px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 500;
-    color: white;
-    background-color: transparent;
-    font-family: "ink free";
-
-}
-
-.side-btn:focus {
-    outline: none;
-}
-
-.side-btn.active {
-    position: relative;
-    background-color: white;
-    color: rgb(89, 165, 252);
-    font-weight: 600;
-    margin-left: 10px;
-    border-radius: 30px 0 0 30px;
-}
-
-.side-btn.active::before {
-    top: -30px;
-}
-
-.side-btn.active::after {
-    bottom: -30px;
-}
-
-.side-btn.active::before, .side-btn.active::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    height: 30px;
-    width: 30px;
-    background-color: white;
-}
-
-.side-btn.active .link-container::before {
-    top: -60px;
-}
-
-.side-btn.active .link-container::after {
-    bottom: -60px;
-    z-index: 99;
-}
-
-.side-btn.active .link-container::before, .side-btn.active .link-container::after {
-    position: absolute;
-    content: "";
-    right: 0px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: rgb(89, 165, 252);
-}
 </style>

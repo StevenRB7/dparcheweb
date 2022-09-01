@@ -69,6 +69,10 @@ const routes = [
       {
         path: '/frases',
         component: () => import('../views/Dashboard/FrasesView.vue')
+      },
+      {
+        path: '/eventos2',
+        component: () => import('../views/Dashboard/Eventos2View.vue')
       }
     ]
   }
