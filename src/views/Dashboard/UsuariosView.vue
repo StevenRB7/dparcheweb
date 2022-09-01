@@ -25,7 +25,7 @@
           <td>{{ user.mail }}</td>
           <td>{{ user.nombre }}</td>
           <td>
-            <button class="btn btn-danger" @click="eliminarDato(index)">
+            <button class="btn btn-danger" @click="eliminarDato(user.id)">
               Eliminar
             </button>
           </td>
@@ -137,18 +137,15 @@ export default {
     //   router.go('/registroempresas')
     // },
 
-    eliminarDato() {
-      if (confirm("Are you sure you want to delete this document?")) {
-        db.collection("Intereses")
-          .doc()
-          .delete()
-          .then(function () {
-            console.log("Document successfully deleted!");
-          })
-          .catch(function (error) {
-            console.error("Error removing document: ", error);
-          });
-      } else {
+    async eliminarDato(id){
+      if(confirm("Are you sure you want to delete this document?")){
+         db.collection("User").doc(id).delete().then(function() {
+         console.log("Document successfully deleted! " + id);
+         }).catch(function(error) {
+         console.error("Error removing document: ", error);  
+         });
+      }else{
+
       }
     },
   },

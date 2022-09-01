@@ -17,8 +17,7 @@
     <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
        <!-- <template #cell(Acciones)="row">
           
-          <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
-
+          <a type="button" @click="eliminarDato(row.item.id)" class="btn btn-secondary"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></a>
 
        </template> -->
     </b-table>
@@ -48,9 +47,9 @@ export default {
   data() {
     return {
       fields: [
-        {key: 'idCorreo', label: 'id',},
-        {key: 'usuario', label: 'Usuario',},
-        {key: 'interes', label: 'Interes'},
+        {key: 'id', label: 'id',},
+        {key: 'data.usuario', label: 'Usuario',},
+        {key: 'data.interes', label: 'Interes'},
       ],
       dataStatusGet: [],
       filter:null,
@@ -74,14 +73,14 @@ export default {
         .get()
         .then(function (result) {
           result.forEach(function (status) {
-            listStatus.push(status.data());
+            listStatus.push({ id:status.id, data:status.data()})
           });
+          
           return listStatus;
         })
         .then((response) => {
-          console.table(response);
+          console.table(response)
         this.dataStatusGet = response;
-
         });
     },
     //  deleteProduct(user){
@@ -112,10 +111,15 @@ export default {
     // },
 
 
-    //  async eliminarDato (index){
-    //   await deleteDoc(doc(db, "Intereses", index ));
-    //   router.go('/registroempresas')
+    //  async eliminarDato (Value){
+    //   alert ("aqui")
+    //   let id=Value;
+    //   await deleteDoc(doc(db, "Intereses", id ));
     // },
+
+//     await deleteDoc(
+//     doc(bd, "usuarios", usuario.id)
+//     );
 
     //  eliminarDato(){
     //   if(confirm("Are you sure you want to delete this document?")){
@@ -128,6 +132,18 @@ export default {
 
     //   }
     // },
+     async eliminarDato(id){
+      if(confirm("Deseas eleminar este registro?")){
+         db.collection("Intereses").doc(id).delete().then(() => {
+         console.log("Registro eliminado Correctamente " + id);
+         }).catch(function(error) {
+         console.error("Error removing document: ", error);  
+         });
+      }else{
+
+      }
+    },
+
   },
    
 };
