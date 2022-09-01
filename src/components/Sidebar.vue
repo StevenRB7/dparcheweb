@@ -5,6 +5,39 @@
     <div class="control">
       <i class="fas fa-angle-double-right" @click="showNav"></i>
     </div>
+    <div class="sidebar">
+        <div v-show="showLink">
+            <img
+            src="../assets/hac.png"
+            alt="Admin"
+            class="rounded-circle"
+            width="150"
+            />
+        </div>
+        <div v-show="showLink">
+        <div class="title">
+        </div>
+        <div class="row">
+            <h5>Nombre</h5>
+        </div>
+        <div class="dato">
+            <h6 class="">{{nombre}}</h6>
+        </div>
+         <div class="row">
+            <h5>Apellido</h5>
+        </div>
+        <div class="dato">
+            <h6 class="">{{apellido}}</h6>
+        </div>
+         <!-- <div class="row">
+            <h5>Rol</h5>
+        </div> -->
+        <div class="dato">
+            <h6 class="">{{rol}}</h6>
+        </div>
+      </div>
+        <br><br>
+    </div>
     <div class="navigation-icons">
       <i class="fas fa-grin-alt" @click="Animos()"></i>
       <i class="fas fa-skating"  @click="Eventos()"></i>
@@ -29,14 +62,21 @@
 </template>
 
 <script>
-
+/* eslint-disable */
 export default {
-  data: () => {
-    return {
-      showSidebar: false,
-      showLink: false
-    }
-  },
+  data: () => ({
+    showSidebar: false,
+    showLink: false,
+    nombre: localStorage.getItem('nombre'),
+    apellido: localStorage.getItem('apellido')
+    // rol: localStorage.getItem('rol')
+  }),
+  // dataa: () => {
+  //   // return {
+  //   //   showSidebar: false,
+  //   //   showLink: false
+  //   // }
+  // },
   methods: {
 
     Animos () {
@@ -71,7 +111,14 @@ export default {
         }, 500)
       }
     }
-  }
+  },
+
+  // dataa: () => {
+  //   return {
+  //     showSidebar: false,
+  //     showLink: false
+  //   }
+  // }
 }
 </script>
 
@@ -170,4 +217,17 @@ export default {
 .fade-leave-to {
   transform: scale(0);
 }
+.row{
+    color: rgb(255, 255, 255);
+    font-family: "viner hand itc";
+}
+.dato{
+    font-family: "showcard gothic";
+}
+.title {
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
 </style>
