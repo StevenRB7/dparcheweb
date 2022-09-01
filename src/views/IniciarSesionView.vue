@@ -95,20 +95,20 @@
                   type="password"
                   class="input"
                   v-model="form.clave"
-                  placeholder="Password"
-                />
+                  placeholder="Password">
               </div>
               <div class="controll">
-                  <img src="../assets/ver.png" alt="" button class="button" @click="toggleShow">
-                  <!-- <span class="icon is-small is-right"> -->
+                  <!-- <img src="../assets/ver.png" alt="" button class="button" @click="toggleShow"> -->
+                  <span class="icon is-small is-right">
                     <i
                       class="fas"
+                      button  @click="toggleShow"
                       :class="{
-                        // 'fa-eye-slash': showPassword,
-                        // 'fa-eye': !showPassword,
+                        'fa-eye-slash': showPassword,
+                        'fa-eye': !showPassword,
                       }"
                     ></i>
-                  <!-- </span> -->
+                  </span>
               </div>
 
               <!-- <label for="exampleInputPassword1" class="form-label">Contraseña</label> -->
