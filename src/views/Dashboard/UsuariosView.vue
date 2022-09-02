@@ -25,9 +25,7 @@
           <td>{{ user.mail }}</td>
           <td>{{ user.nombre }}</td>
           <td>
-            <button class="btn btn-danger" @click="eliminarDato(user.id)">
-              Eliminar
-            </button>
+            <button class="btn btn-danger" @click="eliminarDato()"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></button>
           </td>
         </tr>
       </tbody>

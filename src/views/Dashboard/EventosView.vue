@@ -109,7 +109,7 @@ export default {
         }
         })
         .then((response) => {
-            this.$router.push('/')
+          this.$router.push('/vereventos')
           console.log(response);
         });
     },

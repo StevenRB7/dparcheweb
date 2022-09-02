@@ -22,7 +22,7 @@
           <th scope="row">{{index}}</th>
           <td>{{ user.mensaje }}</td>
           <td>
-          <button @click="eliminarDato(index)" class="btn btn-danger">Eliminar</button>
+          <button @click="eliminarDato(index)" class="btn btn-danger"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></button>
           </td>
         </tr>
       </tbody>
