@@ -2,6 +2,7 @@
 /* eslint-disable */
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
+import 'firebase/compat/database'
 
 const firebaseConfig = {
   apiKey: "AIzaSyD3A_gRwp7S5HDnUUl6swPtA5KNG8oC5w0",
@@ -14,7 +15,7 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig)
 
 const db = app.firestore()
-
+const database = app.database()
 export {
-  firebase, db
+  firebase, db , database
 }

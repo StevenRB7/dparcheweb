@@ -25,9 +25,7 @@
           <td>{{ user.mail }}</td>
           <td>{{ user.nombre }}</td>
           <td>
-            <button class="btn btn-danger" @click="eliminarDato(user.id)">
-              Eliminar
-            </button>
+            <button class="btn btn-danger" @click="eliminarDato()"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></button>
           </td>
         </tr>
       </tbody>
@@ -41,8 +39,9 @@
 import HeaderComponent from "@/components/HeaderComponent.vue";
 
 import axios from "axios";
-import { db } from "@/firebase/init.js";
-import { deleteDoc, doc } from "firebase/firestore";
+import { database } from "@/firebase/init.js";
+let usersRef = database.ref('User');
+
 
 export default {
   name: "RegistroEmpresasView",
@@ -58,14 +57,8 @@ export default {
       dataUsers: [],
    
     };
-
-    
   },
-  // firestore(){
-  //     return {
-  //       Intereses: db.collection('Intereses'),
-  //     }
-  // },
+  
   mounted() {
     this.verUsuarios();
     
@@ -104,43 +97,10 @@ export default {
           console.log(error);
         });
     },
-
-    //  deleteProduct(user){
-    //   db.collection("Intereses").doc(user).delete().then(() => {
-    // console.log("Document successfully deleted!");
-    // }).catch((error) => {
-    // console.error("Error removing document: ", error);
-    // });
-    // },
-
-    // async getDelete(){
-    //   const deleteTask = id => db.collection("Intereses")
-    //    .doc(id)
-    //    .delete()
-    //   .then(function () {
-    //   console.log("Document successfully deleted!");
-    //    }).catch(
-    //    function(error) {
-    //    console.error("Error removing document: ", error);
-    //   });
-
-    //   const deleteButtons = document.querySelectorAll('.btn-delete');
-    //         deleteButtons.forEach(btn => {
-    //             btn.addEventListener('click', async (e) => {
-    //                 await deleteTask(e.target.dataset.id);
-    //             })
-    //         })
-    // },
-
-    //  async eliminarDato (index){
-    //   await deleteDoc(doc(db, "Intereses", index ));
-    //   router.go('/registroempresas')
-    // },
-
-    async eliminarDato(id){
+   eliminarDato(index){
       if(confirm("Are you sure you want to delete this document?")){
-         db.collection("User").doc(id).delete().then(function() {
-         console.log("Document successfully deleted! " + id);
+         usersRef.child(index).remove().then(function() {
+         console.log("Document successfully deleted! " + index);
          }).catch(function(error) {
          console.error("Error removing document: ", error);  
          });
@@ -151,16 +111,15 @@ export default {
   },
 };
 
-// function DeleteData(){
-//   remove(ref(db, "Frases/" + index.value))
-//   .then(() => {
-//     alert("Frase eliminada Correctamente")
-//   })
-//   .catch((error) => {
-//     alert("Pailas" +error);
-//   });
-// }
-
-// delBtn.addEventListener('click', DeleteData);
-function eliminar(id) {}
 </script>
+
+<style scoped>
+
+.Empresas{
+
+  margin-left: 300px;
+  margin-right: 300px;
+
+}
+
+</style>

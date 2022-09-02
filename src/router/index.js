@@ -71,8 +71,8 @@ const routes = [
         component: () => import('../views/Dashboard/FrasesView.vue')
       },
       {
-        path: '/eventos2',
-        component: () => import('../views/Dashboard/Eventos2View.vue')
+        path: '/vereventos',
+        component: () => import('../views/Dashboard/VerEventosView.vue')
       }
     ]
   }

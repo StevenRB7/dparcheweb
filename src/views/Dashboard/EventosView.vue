@@ -3,7 +3,7 @@
     <HeaderComponent/>
 <!-- eslint-disable -->
     <div class="row justify-content-center my-5">
-        <div class="col-11 col-lg-8 offset-lg-0">
+        <div class="col-11 col-lg-8 offset-lg-0" >
             <div class="card text-center ml-4 ml-sm-5 ml-lg-0" id="card-form">
                 <div class="card-body justify-content-center border border-primary rounded">
                     <h2 class="card-title mt-1" id="title-card">Formulario Eventos</h2>
@@ -109,7 +109,7 @@ export default {
         }
         })
         .then((response) => {
-            this.$router.push('/')
+          this.$router.push('/vereventos')
           console.log(response);
         });
     },

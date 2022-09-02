@@ -79,59 +79,11 @@ export default {
           return listStatus;
         })
         .then((response) => {
-          console.table(response)
+        console.table(response)
         this.dataStatusGet = response;
         });
     },
-    //  deleteProduct(user){
-    //   db.collection("Intereses").doc(user).delete().then(() => {
-    // console.log("Document successfully deleted!");
-    // }).catch((error) => {
-    // console.error("Error removing document: ", error);  
-    // });
-    // },
-
-    // async getDelete(){
-    //   const deleteTask = id => db.collection("Intereses")
-    //    .doc(id)
-    //    .delete()
-    //   .then(function () { 
-    //   console.log("Document successfully deleted!"); 
-    //    }).catch(
-    //    function(error) { 
-    //    console.error("Error removing document: ", error); 
-    //   });
-
-    //   const deleteButtons = document.querySelectorAll('.btn-delete');
-    //         deleteButtons.forEach(btn => {
-    //             btn.addEventListener('click', async (e) => {
-    //                 await deleteTask(e.target.dataset.id);
-    //             })
-    //         })
-    // },
-
-
-    //  async eliminarDato (Value){
-    //   alert ("aqui")
-    //   let id=Value;
-    //   await deleteDoc(doc(db, "Intereses", id ));
-    // },
-
-//     await deleteDoc(
-//     doc(bd, "usuarios", usuario.id)
-//     );
-
-    //  eliminarDato(){
-    //   if(confirm("Are you sure you want to delete this document?")){
-    //      db.collection("Intereses").doc().delete().then(function() {
-    //      console.log("Document successfully deleted!");
-    //      }).catch(function(error) {
-    //      console.error("Error removing document: ", error);  
-    //      });
-    //   }else{
-
-    //   }
-    // },
+   
      async eliminarDato(id){
       if(confirm("Deseas eleminar este registro?")){
          db.collection("Intereses").doc(id).delete().then(() => {
@@ -148,20 +100,6 @@ export default {
    
 };
 
-// function DeleteData(){
-//   remove(ref(db, "Frases/" + index.value))
-//   .then(() => {
-//     alert("Frase eliminada Correctamente")
-//   })
-//   .catch((error) => {
-//     alert("Pailas" +error);
-//   });
-// }
-
-// delBtn.addEventListener('click', DeleteData);
-function eliminar(id){
-     
-    }
 </script>
 <style scoped>
 .py-3 {

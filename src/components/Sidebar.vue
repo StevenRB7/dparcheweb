@@ -100,7 +100,7 @@ export default {
       this.$router.push('/usuarios')
     },
     Eventos2 () {
-      this.$router.push('/eventos2')
+      this.$router.push('/vereventos')
     },
 
     showNav () {
