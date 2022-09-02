@@ -110,7 +110,7 @@ export default {
   font-family: "snap itc";
 }
 .cara2{
-  margin-left: 180px;
+  margin-left: 200px;
   width: 100%;
 }
 
