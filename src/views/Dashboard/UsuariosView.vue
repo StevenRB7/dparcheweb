@@ -57,14 +57,8 @@ export default {
       dataUsers: [],
    
     };
-
-    
   },
-  // firestore(){
-  //     return {
-  //       Intereses: db.collection('Intereses'),
-  //     }
-  // },
+  
   mounted() {
     this.verUsuarios();
     
