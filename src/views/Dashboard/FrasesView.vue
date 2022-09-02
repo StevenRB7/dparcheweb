@@ -22,7 +22,7 @@
           <th scope="row">{{index}}</th>
           <td>{{ user.mensaje }}</td>
           <td>
-          <button id="delBtn" class="btn btn-danger">Eliminar</button>
+          <button @click="eliminarDato(index)" class="btn btn-danger">Eliminar</button>
           </td>
         </tr>
       </tbody>
@@ -37,8 +37,8 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 
 
 import axios from "axios";
-import { db } from "@/firebase/init.js";
-import { deleteDoc, doc } from 'firebase/firestore';
+import { database } from "@/firebase/init.js";
+let frasesRef = database.ref('Frases');
 
 
 export default {
@@ -95,44 +95,10 @@ export default {
         });
     },
 
-
-    //  deleteProduct(user){
-    //   db.collection("Intereses").doc(user).delete().then(() => {
-    // console.log("Document successfully deleted!");
-    // }).catch((error) => {
-    // console.error("Error removing document: ", error);  
-    // });
-    // },
-
-    // async getDelete(){
-    //   const deleteTask = id => db.collection("Intereses")
-    //    .doc(id)
-    //    .delete()
-    //   .then(function () { 
-    //   console.log("Document successfully deleted!"); 
-    //    }).catch(
-    //    function(error) { 
-    //    console.error("Error removing document: ", error); 
-    //   });
-
-    //   const deleteButtons = document.querySelectorAll('.btn-delete');
-    //         deleteButtons.forEach(btn => {
-    //             btn.addEventListener('click', async (e) => {
-    //                 await deleteTask(e.target.dataset.id);
-    //             })
-    //         })
-    // },
-
-
-    //  async eliminarDato (index){
-    //   await deleteDoc(doc(db, "Intereses", index ));
-    //   router.go('/registroempresas')
-    // },
-
-     eliminarDato(){
+     eliminarDato(index){
       if(confirm("Are you sure you want to delete this document?")){
-         db.collection("Intereses").doc().delete().then(function() {
-         console.log("Document successfully deleted!");
+         frasesRef.child(index).remove().then(function() {
+         console.log("Document successfully deleted! " + index);
          }).catch(function(error) {
          console.error("Error removing document: ", error);  
          });
@@ -144,18 +110,15 @@ export default {
    
 };
 
-// function DeleteData(){
-//   remove(ref(db, "Frases/" + index.value))
-//   .then(() => {
-//     alert("Frase eliminada Correctamente")
-//   })
-//   .catch((error) => {
-//     alert("Pailas" +error);
-//   });
-// }
-
-// delBtn.addEventListener('click', DeleteData);
-function eliminar(id){
-     
-    }
 </script>
+
+<style scoped>
+
+.Empresas{
+
+  margin-left: 300px;
+  margin-right: 300px;
+
+}
+
+</style>

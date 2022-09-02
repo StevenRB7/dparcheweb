@@ -115,7 +115,7 @@ export default {
 
 <style scoped>
 .cara2{
-  margin-left: 120px;
+  margin-left: 140px;
   width: 110%;
 }
 .contemelo{
