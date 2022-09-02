@@ -24,6 +24,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'FooterComponent'
 }
@@ -47,6 +48,7 @@ footer {
   flex-direction: column;
   text-align: center;
 }
+
 .footer-content h3 {
   font-size: 1.8rem;
   font-weight: 400;
@@ -80,6 +82,7 @@ footer {
      text-decoration: none;
      color: #ffff;
 }
+
 .iconos{
   width: 30px;
   height: 30px;
@@ -87,5 +90,13 @@ footer {
 }
 .d{
 margin-left: 50px;}
+@media (max-width: 682px) {
+  .map{
+    display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  min-width: 100px;
 
+}
+  }
 </style>
