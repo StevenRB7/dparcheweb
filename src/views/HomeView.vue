@@ -1,7 +1,40 @@
 <template>
   <div class="home">
     <HeaderComponent />
+  <div class="oe">
+    <b-navbar toggleable="lg" type="dark" variant="">
+    <!-- <b-navbar-brand href="#">D'Parche</b-navbar-brand> -->
 
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <div class="ja">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#inicio" tabindex="-1" aria-disabled="true">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a>
+                    </li>
+                    <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a to="/Inicios" class="nav-link" href="/Inicios" tabindex="-1" aria-disabled="true">Iniciar
+                        Sesión</a>
+                    </li>
+                  </ul>
+                </div>
+      </b-navbar-nav>
+
+    </b-collapse>
+  </b-navbar>
+  </div>
     <div class="hello">
       <div class="container-fluid fh5co-two-img">
         <div class="row">
@@ -19,83 +52,15 @@
           </div>
         </div>
       </div>
-
       <div>
-        <nav class="header navbar navbar-expand fixed-top maine-menu">
-          <div class="container divv">
-            <button
-              class="navbar-toggler ml-auto"
-              data-target="#my-nav"
-              onclick="myFunction(this)"
-              data-toggle="collapse"
-            >
-              <span class="bar1"></span> <span class="bar2"></span>
-              <span class="bar3"></span>
-            </button>
-            <div id="my-nav" class="collapse navbar-collapse">
-              <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#inicio"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#act"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Actividad</a
-                  >
-                </li>
-                <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#categoria"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Categorias</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#nosotros"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Nosotros</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    to="/Inicios"
-                    class="nav-link"
-                    href="/Inicios"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Iniciar Sesión</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+
+</div>
     </div>
     <div class="container contact-pop">
       <div class="row">
         <div class="col-md-6 pr-0">
           <div class="card">
-            <img
-              class="card-img w-100"
-              src="../assets/dparchea_1000.png"
-              alt=""
-            />
+            <img class="card-img w-100" src="../assets/dparchea_1000.png" alt="" />
             <div class="card-img-overlay"></div>
           </div>
         </div>
@@ -334,7 +299,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
     <br />
     <br />
     <br />
@@ -350,16 +315,11 @@
         <br />
         <div class="d-block" id="contact">
           <div class="iconos1">
-            <link
-              rel="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            />
+            <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
             <ul class="redes">
               <li class="redes2">
-                <a
-                  href="https://web.facebook.com/DParche-112064994962334"
-                  target="_blank"
-                >
+                <a href="https://web.facebook.com/DParche-112064994962334" target="_blank">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -465,51 +425,59 @@ export default {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 .let {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
 /* estilos contactanos */
 
 .contact-pop {
   margin-top: -300px;
 }
+
 .contact-pop .card-img-overlay {
-  background: -webkit-linear-gradient(
-    rgba(0, 0, 0, 0.2),
-    rgba(134, 133, 133, 0.6)
-  );
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2),
+      rgba(134, 133, 133, 0.6));
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
   background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
   background: -linear-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
   border-radius: 15px 0 0 15px;
 }
+
 .contact-pop .row {
   max-width: 918px;
   margin: 0 auto;
 }
+
 .contact-pop img {
   border-radius: 15px 0 0 15px;
 }
+
 .contact-pop .content {
   padding: 45px 20px 20px 40px;
   height: 100%;
   background: rgba(255, 255, 255, 0.859);
   border-radius: 0 15px 15px 0;
 }
+
 .contact-pop h3 {
   color: #3d383a;
   font-size: 30px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
 .contact-pop h4 {
   color: #978b91;
   font-size: 18px;
   font-family: "PT-Sans-Regular";
 }
+
 .contact-pop p {
   color: #584f53;
 }
+
 .contact-pop hr {
   background-color: rgb(0, 119, 255);
   width: 50px;
@@ -517,6 +485,7 @@ export default {
   border: none;
   margin-left: 0;
 }
+
 .contact-pop a {
   background-color: rgb(89, 165, 252);
   width: 158px;
@@ -525,45 +494,57 @@ export default {
   padding: 10px 0;
   margin-top: 20px;
 }
+
 @media (max-width: 991px) {
   .contact-pop {
     padding: 20px 20px 20px 25px;
   }
+
   .contact-pop h3 {
     font-size: 24px;
   }
+
   .contact-pop h4 {
     font-size: 16px;
   }
+
   .contact-pop p {
     font-size: 14px;
   }
+
   .contact-pop a {
     width: 120px;
     padding: 5px 0;
   }
+
   .contact-pop hr {
     margin: 10px 0;
   }
 }
+
 @media (max-width: 991px) {
   .contact-pop {
     margin-top: -250px;
   }
 }
+
 @media (max-width: 767px) {
   .contact-pop {
     margin-top: 0;
   }
+
   .contact-pop .col-md-6 {
     padding: 0;
   }
+
   .contact-pop img {
     border-radius: 15px 15px 0 0;
   }
+
   .contact-pop .card-img-overlay {
     border-radius: 15px 15px 0 0;
   }
+
   .contact-pop {
     border-radius: 0 0 15px 15px;
   }
@@ -575,12 +556,14 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .redes {
   position: relative;
   display: contents;
   transform-style: preserve-3d;
   transform: rotate(-25deg) skew(25deg);
 }
+
 .redes .redes2 {
   position: relative;
   list-style: none;
@@ -588,6 +571,7 @@ export default {
   height: 50px;
   margin: 0 10px;
 }
+
 .redes .redes2::before {
   content: "";
   position: absolute;
@@ -599,6 +583,7 @@ export default {
   transform-origin: top;
   transform: skewX(-41deg);
 }
+
 .redes .redes2::after {
   content: "";
   position: absolute;
@@ -610,6 +595,7 @@ export default {
   transform-origin: right;
   transform: skewY(-49deg);
 }
+
 .redes .redes2 span {
   position: absolute;
 
@@ -625,32 +611,39 @@ export default {
   font-size: 30px !important;
   transition: 0.2s;
 }
+
 .redes .redes2:hover span {
   z-index: 1000;
   transition: 0.5s;
   color: #fff;
   box-shadow: -1px 1px 1px rgba(103, 18, 18, 0.05);
 }
+
 .redes .redes2:hover span:nth-child(5) {
   transform: translate(40px, -40px);
   opacity: 1;
 }
+
 .redes .redes2:hover span:nth-child(4) {
   transform: translate(30px, -30px);
   opacity: 0.8;
 }
+
 .redes .redes2:hover span:nth-child(3) {
   transform: translate(20px, -20px);
   opacity: 0.6;
 }
+
 .redes .redes2:hover span:nth-child(2) {
   transform: translate(10px, -10px);
   opacity: 0.4;
 }
+
 .redes .redes2:hover span:nth-child(1) {
   transform: translate(0px, 0px);
   opacity: 0.2;
 }
+
 .redes .redes2:nth-child(1):hover span {
   background: #3b5999;
 }
@@ -667,6 +660,7 @@ export default {
 .ia {
   border-radius: 50%;
 }
+
 .miv {
   margin: 0;
   padding: 0;
@@ -767,6 +761,7 @@ export default {
 .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
 }
+
 /* estilos2 */
 /* @media (max-width: 631px) {
     .contaner {
@@ -774,13 +769,12 @@ export default {
     padding: 40px;
   background-position:right ; } } */
 
-element.style {
-}
+element.style {}
 
 .arow {
   display: flex;
   flex-wrap: wrap;
-margin:calc(8%);
+  margin: calc(8%);
 }
 
 /* color de letras */
@@ -790,6 +784,7 @@ margin:calc(8%);
   padding: 15px 25px;
   color: #fff;
 }
+
 /* hover del header */
 .maine-menu .navbar-nav li.active a,
 .maine-menu .navbar-nav li:hover a,
@@ -797,6 +792,7 @@ margin:calc(8%);
   /* color: #559FE0; */
   color: rgb(89, 165, 252);
 }
+
 .fo {
   margin: 25px;
   width: 300px;
@@ -831,6 +827,7 @@ margin:calc(8%);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: transparent;
 }
+
 .recent .card.active,
 .recent .card:hover {
   transform: scale(1.05, 1.1);
@@ -847,10 +844,12 @@ margin:calc(8%);
   background: linear-gradient(rgba(0, 0, 0, 0.3), #559fe0);
   background: -ms-linear-gradient(rgba(0, 0, 0, 0.3), #559fe0);
 }
+
 .recent .card.active p,
 .recent .card:hover p {
   color: #ffffff;
 }
+
 .clickme-text {
   color: inherit;
   flex: 100 auto;
@@ -865,12 +864,15 @@ margin:calc(8%);
   bottom: 0;
   position: relative !important;
 }
+
 .clickme-text:hover:before {
   opacity: 0.1;
 }
+
 .clickme-text:active:before {
   opacity: 100;
 }
+
 .hash {
   color: currentColor;
   opacity: 0.3;
@@ -879,10 +881,12 @@ margin:calc(8%);
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
@@ -902,14 +906,15 @@ li {
 .div1 {
   z-index: -1;
 }
+
 @media (max-width: 1405px) {
   .container {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
-
   }
 }
+
 @media (max-width: 1282px) {
   .owl-carousel {
     position: relative;
@@ -917,6 +922,7 @@ li {
     min-width: 100px;
   }
 }
+
 @media (max-width: 1282px) {
   .arow {
     position: relative;
@@ -924,6 +930,19 @@ li {
     min-width: 100px;
   }
 }
+.oe{
+background-color: #000000;
 
+}
+.ja{
+  /* align-items: center;
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; */
+  margin-left: 50%;
 
+}
 </style>
