@@ -2,7 +2,7 @@
 
 <template>
 <div class="cara2">
-  <h1 class="contemelo text-primary">Estados de Animo</h1>
+  <h1 class="contemelo ">Estados de Animo</h1>
   <section class="contenedorinte">
       <div class="control-label" align="center">
         <div class="input-group" style="width: 50%" align="center"> 
@@ -15,7 +15,7 @@
         </div>
 <br>
 </div>
-    <b-table responsive="sm" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table melo" style="width: 80%" align="center" >
+    <b-table thead-class="green-bg bg-secondary text-white" responsive="sm" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table melo" style="width: 80%" align="center" >
        <!-- <template #cell(Acciones)="row">
           
           <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
@@ -98,6 +98,7 @@ export default {
   margin-top: 5%;
 }
 .contemelo{
+  color: #039be5;
   margin-top: 60px;
   font-family: "snap itc";
 }
