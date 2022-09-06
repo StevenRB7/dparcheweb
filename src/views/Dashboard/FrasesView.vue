@@ -7,11 +7,11 @@
         <b-col md="12" class="py-3">
         </b-col>
       </b-row>
-      <h3 class="font-weight-bold">Frases</h3>
+      <h1 class="contemelo">Frases</h1>
     </b-container>
 <table id="tabla_frases" class="table table-bordered " style="width: 90%" align="center">
       <thead>
-        <tr class="bg-primary text-white" >
+        <tr class="bg-secondary text-white" >
           <th scope="col">Id</th>
           <th scope="col">Frase</th>
           <th scope="col">Opciones</th>
@@ -102,6 +102,7 @@ export default {
          }).catch(function(error) {
          console.error("Error removing document: ", error);  
          });
+         this.$router.go();
       }else{
 
       }
@@ -120,5 +121,12 @@ export default {
   margin-right: 300px;
 
 }
+
+.contemelo{
+  color: #039be5;
+  margin-top: 60px;
+  font-family: "snap itc";
+}
+
 
 </style>

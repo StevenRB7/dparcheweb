@@ -7,12 +7,12 @@
         <b-col md="12" class="py-3"> 
         </b-col>
       </b-row>
-      <h3 class="font-weight-bold">Usuarios</h3>
+      <h1 class="contemelo ">Usuarios</h1>
     </b-container>
     <table id="table_id" class="table table-bordered" style="width: 90%" align="center"
     >
       <thead>
-        <tr class="bg-primary text-white">
+        <tr class="bg-secondary text-white">
           <th scope="col">Id</th>
           <th scope="col">Correo</th>
           <th scope="col">Usuario</th>
@@ -25,7 +25,7 @@
           <td>{{ user.mail }}</td>
           <td>{{ user.nombre }}</td>
           <td>
-            <button class="btn btn-danger" @click="eliminarDato()"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></button>
+            <button class="btn btn-danger" @click="eliminarDato(index)"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></button>
           </td>
         </tr>
       </tbody>
@@ -104,6 +104,7 @@ export default {
          }).catch(function(error) {
          console.error("Error removing document: ", error);  
          });
+         this.$router.go();
       }else{
 
       }
@@ -120,6 +121,12 @@ export default {
   margin-left: 300px;
   margin-right: 300px;
 
+}
+
+.contemelo{
+  color: #039be5;
+  margin-top: 60px;
+  font-family: "snap itc";
 }
 
 </style>

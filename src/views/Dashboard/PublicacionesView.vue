@@ -3,7 +3,7 @@
 
 <div class="cara2">
 
-  <h1 class="contemelo text-primary">Publicaciones</h1>
+  <h1 class="contemelo ">Publicaciones</h1>
   <section class="cara3">
       <div class="control-label" align="center">
         <div class="input-group" style="width: 50%" align="center"> 
@@ -17,10 +17,10 @@
 <br>
 </div>
 <div>
-    <b-table sm v-bind="estilos" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" style="width: 80%" >
+    <b-table thead-class="green-bg bg-secondary text-white" sm v-bind="estilos" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" style="width: 80%" >
        <template #cell(Opciones)="row">
           
-          <a type="button" @click="eliminarDato(row.item.id)" class="btn btn-secondary"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></a>
+          <a type="button" @click="eliminarDato(row.item.id)" class="btn btn-danger"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></a>
 
        </template>
     </b-table>
@@ -37,7 +37,7 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 
 
 import axios from "axios";
-import { db } from "@/firebase/init.js";
+import { db, onSnapshot } from "@/firebase/init.js";
 import { deleteDoc, doc } from 'firebase/firestore';
 
 
@@ -119,6 +119,7 @@ export default {
   width: 110%;
 }
 .contemelo{
+  color: #039be5;
   margin-top: 30px;
   font-family: "snap itc";
 }

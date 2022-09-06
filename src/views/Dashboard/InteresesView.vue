@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
 <div class="cara2">
-  <h1 class="contemelo text-primary">Intereses</h1>
+  <h1 class="contemelo ">Intereses</h1>
   <section class="contenedorinte">
       <div class="control-label" align="center">
         <div class="input-group" style="width: 50%" align="center"> 
@@ -14,7 +14,7 @@
         </div>
 <br>
 </div>
-    <b-table hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
+    <b-table thead-class="green-bg bg-secondary text-white" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table" style="width: 80%" align="center" >
        <!-- <template #cell(Acciones)="row">
           
           <a type="button" @click="eliminarDato(row.item.id)" class="btn btn-secondary"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></a>
@@ -55,6 +55,7 @@ export default {
       filter:null,
       perPage: 10,
       currentPage: 1,
+    
     }
   },
   computed: {
@@ -95,10 +96,19 @@ export default {
 
       }
     },
-
   },
-   
 };
+
+// function countListener(onCountChange: (count: number) => void) {
+//     const query = firebase.firestore().collection("fruits");
+//     let count = 0;
+//     return query.onSnapshot(snapshot => {
+//         snapshot.docChanges().forEach(change => {
+//             if (change.type === "added") onCountChange(++count);
+//             if (change.type === "removed") onCountChange(--count);
+//         });
+//     });
+// };
 
 </script>
 <style scoped>
@@ -116,10 +126,12 @@ export default {
 }
 .contemelo{
   margin-top: 60px;
+  color: #039be5;
   text-shadow: -1px -1px 1px #aaa
   0px 4px 1px rgba(0,0,0,0.5),
   4px 4px 5px rgba(0,0,0,0.7),
   0px 0px 7px rgba(0,0,0,0.4);
   font-family: "snap itc";
 }
+
 </style>
