@@ -46,6 +46,7 @@
       <i class="fas fa-chalkboard-teacher" @click="Publicaciones()"></i>
       <i class="fas fa-user-circle"  @click="Usuarios()"></i>
       <i class="fas fa-futbol"  @click="Eventos2()"></i>
+      <i class="mover fa fa-sign-out"  @click="salir()"></i>
 
     </div>
     <div class="navigation-links">
@@ -57,6 +58,7 @@
         <div v-show="showLink" @click="Publicaciones()" key="5">Publicaciones</div>
         <div v-show="showLink" @click="Usuarios()" key="5">Usuarios</div>
         <div v-show="showLink" @click="Eventos2()" key="5">Eventos</div>
+        <div class="mover2" v-show="showLink" @click="salir()" key="7">Cerrar sesión</div>
 
       </transition-group>
     </div>
@@ -70,7 +72,8 @@ export default {
     showSidebar: false,
     showLink: false,
     nombre: localStorage.getItem('nombre'),
-    apellido: localStorage.getItem('apellido')
+    apellido: localStorage.getItem('apellido'),
+    cerrar: localStorage.getItem('rol')
     // rol: localStorage.getItem('rol')
   }),
   // dataa: () => {
@@ -79,6 +82,7 @@ export default {
   //   //   showLink: false
   //   // }
   // },
+  
   methods: {
 
     Animos () {
@@ -101,6 +105,11 @@ export default {
     },
     Eventos2 () {
       this.$router.push('/vereventos')
+    },
+    salir(){
+      localStorage.clear();
+      this.$router.push('/')
+
     },
 
     showNav () {
@@ -128,6 +137,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .mover{
+margin-top: 150px;
+  }
+  .mover2{
+    margin-top: 175px;
+
+  }
 .container {
   position: absolute;
   box-sizing: content-box;
