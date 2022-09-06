@@ -1,6 +1,7 @@
 <!-- eslint-disable -->
 <template>
 <div class="cara2">
+  <BarChart class="bar"/>
   <h1 class="contemelo ">Intereses</h1>
   <section class="contenedorinte">
       <div class="control-label" align="center">
@@ -31,6 +32,8 @@
 /* eslint-disable */
 // @ is an alias to /src
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import BarChart from "@/components/Bar.vue"
+
 
 
 import axios from "axios";
@@ -42,6 +45,7 @@ export default {
   name: "RegistroEmpresasView",
   components: {
     HeaderComponent,
+    BarChart,
   },
 
   data() {
@@ -80,7 +84,6 @@ export default {
           return listStatus;
         })
         .then((response) => {
-        console.table(response)
         this.dataStatusGet = response;
         });
     },
@@ -132,6 +135,12 @@ export default {
   4px 4px 5px rgba(0,0,0,0.7),
   0px 0px 7px rgba(0,0,0,0.4);
   font-family: "snap itc";
+}
+
+.bar{
+  width: 50%;
+  margin-left: 300px;
+  margin-top: 40px;
 }
 
 </style>
