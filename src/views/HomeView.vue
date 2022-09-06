@@ -8,18 +8,18 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
+      <b-navbar-nav id="menu">
         <div class="ja">
                   <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                       <a class="nav-link" href="#inicio" tabindex="-1" aria-disabled="true">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividad</a>
+                      <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividades</a>
                     </li>
                     <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
                     <li class="nav-item">
-                      <a class="nav-link" href="#categoria" tabindex="-1" aria-disabled="true">Categorias</a>
+                      <a class="nav-link" href="#categorias" tabindex="-1" aria-disabled="true">Categorias</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a>
@@ -185,8 +185,8 @@
     </div>
     <br />
     <br />
-    <div class="container recent " id="categoria">
-      <h2 class="let container">Categoria</h2>
+    <div class="container recent " id="categorias">
+      <h2 class="let container">Categorias</h2>
       <div class="arow">
         <br /><br />
         <div class="owl-carousel owl-theme d-flex">
@@ -912,6 +912,9 @@ li {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
   }
 }
 
@@ -920,6 +923,9 @@ li {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
   }
 }
 
@@ -928,21 +934,22 @@ li {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
   }
 }
 .oe{
 background-color: #000000;
+display: flex;
+justify-content:center;
 
 }
 .ja{
-  /* align-items: center;
-  justify-content: center;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
-  margin-left: 50%;
 
+   margin-left: 70%;
+
+  margin:auto;
+		    display:block;
 }
 </style>

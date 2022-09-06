@@ -213,7 +213,6 @@ export default {
             if (this.user.rol === "administrador") {
               //opcion vuex
               //store.dispatch('mockLogin')
-              localStorage.token;
               this.$router.push("/dashboard");
             }
           } else {

@@ -8,10 +8,21 @@
 </template>
 
 <script>
+/* eslint-disable */
+// @ is an alias to /src
 import Sidebar from '@/components/Sidebar.vue'
 export default {
   components: {
     Sidebar
+  },
+  mounted(){
+    if (localStorage.token != null){
+      this.$router.push('/dashboard')
+
+    }else{
+      this.$router.push('/Inicios')
+
+    }
   }
 }
 </script>
