@@ -11,12 +11,12 @@
 </div>
 
 <br>
-        <h3 class="d">D'PARCHE</h3>
+        <a class="d" href="#menu"><h3   >D'PARCHE</h3></a>
         <h6><a href="https://wa.me/message/EKPS4PAESNM4L1" class="sj d"> Contactanos: 3245708819</a></h6>
         <h6 class="d">La Paciencia Es Una Gran Virtud</h6>
 
       <div class="footer-bottom">
-        <p class="d">copyright &copy;2022 @D'Parche. </p>
+        <p class="d">copyright &copy;2022 @D'Parche.</p>
       </div>
     </footer>
   </div>
@@ -31,6 +31,14 @@ export default {
 </script>
 
 <style scoped>
+  .d{
+    cursor: pointer;
+    display: contents;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+color:#fff;
+  }
 
 footer {
   position: relative;
@@ -88,8 +96,7 @@ footer {
   height: 30px;
   margin-left: 40px;
 }
-.d{
-margin-left: 50px;}
+
 @media (max-width: 682px) {
   .map{
     display: flex;
