@@ -912,6 +912,9 @@ li {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
   }
 }
 
@@ -920,6 +923,9 @@ li {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
   }
 }
 
@@ -928,21 +934,22 @@ li {
     position: relative;
     flex-wrap: wrap;
     min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
   }
 }
 .oe{
 background-color: #000000;
+display: flex;
+justify-content:center;
 
 }
 .ja{
-  /* align-items: center;
-  justify-content: center;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
-  margin-left: 50%;
 
+   margin-left: 70%;
+
+  margin:auto;
+		    display:block;
 }
 </style>
