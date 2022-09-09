@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
 <div class="cara2">
-  <BarChart class="bar"/>
+  <!-- <BarChart class="bar"/> -->
   <h1 class="contemelo ">Intereses</h1>
   <section class="contenedorinte">
       <div class="control-label" align="center">
@@ -24,6 +24,19 @@
     </b-table>
     <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
   </section>
+    <div>
+  <a type="button" @click="count()" class="btn btn-secondary">Generar Registro</a>
+</div>
+<div class="contadores">
+ 
+ <input type="text" id="conta1" class="color">
+ <input type="text" id="conta2" class="color">
+ <input type="text" id="conta3" class="color">
+ <input type="text" id="conta4" class="color">
+ <input type="text" id="conta5" class="color">
+ <input type="text" id="conta6" class="color">
+
+</div>
 </div>
   
 </template>                           
@@ -37,9 +50,14 @@ import BarChart from "@/components/Bar.vue"
 
 
 import axios from "axios";
-import { db } from "@/firebase/init.js";
+import { db, database} from "@/firebase/init.js";
 import { deleteDoc, doc } from 'firebase/firestore';
-
+let cicliRef = database.ref('Ciclismo');
+let recreRef = database.ref('Recreacion');
+let cofeeRef = database.ref('Cofeebar');
+let ambiRef = database.ref('Ambiente');
+let pintuRef = database.ref('Pintura');
+let pisciRef = database.ref('Piscinas');
 
 export default {
   name: "RegistroEmpresasView",
@@ -99,19 +117,53 @@ export default {
 
       }
     },
+
+     async count (){
+
+        cicliRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta1').value = "Ciclismo = " + count;
+        console.log("felicez " + count);
+        })
+
+        recreRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta2').value = "Recreacion = " + count;
+        console.log("enojado " + count);
+        })
+
+        cofeeRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta3').value = "Cofeebar = " + count;
+        console.log("tristes " + count);
+        })
+
+        ambiRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta4').value = "Ambiente = " + count;
+        console.log("felicez " + count);
+        })
+
+        pintuRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta5').value = "Pintura = " + count;
+        console.log("enojado " + count);
+        })
+
+        pisciRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta6').value = "Piscinas = " + count;
+        console.log("tristes " + count);
+        })
+    },
   },
 };
-
-// function countListener(onCountChange: (count: number) => void) {
-//     const query = firebase.firestore().collection("fruits");
-//     let count = 0;
-//     return query.onSnapshot(snapshot => {
-//         snapshot.docChanges().forEach(change => {
-//             if (change.type === "added") onCountChange(++count);
-//             if (change.type === "removed") onCountChange(--count);
-//         });
-//     });
-// };
 
 </script>
 <style scoped>
@@ -141,6 +193,17 @@ export default {
   width: 50%;
   margin-left: 300px;
   margin-top: 40px;
+}
+
+.contadores{
+  margin-top: 20px;
+  font-family: cursive;
+  text-justify: auto;
+  font-size: 20px;
+}
+.color{
+  background: rgb(148, 224, 243);
+ 
 }
 
 </style>

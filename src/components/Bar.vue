@@ -27,8 +27,7 @@ import {
   CategoryScale,
   LinearScale
 } from 'chart.js'
-import { loadBundle } from '@firebase/firestore'
-import data from 'bootstrap/js/dist/dom/data'
+
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
@@ -74,7 +73,7 @@ export default {
         datasets: [  {
           label: "Intereses",
           backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-          data: [11,50,15],
+          data: [1,5,5],
           bgColors:[]
         }],
         bgColors: [
@@ -126,8 +125,7 @@ export default {
           return listStatus;
         })
         .then((response) => {
-    
-        this.chartData.labels = response+{key: 'data.ambiente'};
+        this.chartData.labels = response;
         console.table(response);
         
         // this.chartData.datasets[1].label = response[1].data.usuario

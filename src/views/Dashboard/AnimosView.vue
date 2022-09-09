@@ -25,8 +25,17 @@
     </b-table>
     <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
   </section>
+  <div>
+  <a type="button" @click="count()" class="btn btn-secondary">Generar Registro</a>
 </div>
-  
+<div class="contadores">
+ 
+ <input type="text" id="conta1" class="color">
+ <input type="text" id="conta2" class="color">
+ <input type="text" id="conta3" class="color">
+
+</div>
+</div>
 </template> 
 <script>
 /* eslint-disable */
@@ -34,7 +43,11 @@
 import HeaderComponent from "@/components/HeaderComponent.vue";
 
 import axios from "axios";
-import { db } from "@/firebase/init.js";
+import { db,database } from "@/firebase/init.js";
+let felizRef = database.ref('Feliz');
+let enojaRef = database.ref('Enojado');
+let trizRef = database.ref('Trizte');
+
 
 export default {
   name: "EstadosAnimoView",
@@ -49,10 +62,12 @@ export default {
         {key: 'idCorreo', label: 'id', _rowVariant: 'success'},
         {key: 'usuario', label: 'Usuario',},
         {key: 'estado', label: 'Estado'},
+        {key: 'fechaa', label: 'Fecha',},
       ],
       dataStatusGet: [],
+      contadores: [],
       filter:null,
-      perPage: 10,
+      perPage: 8,
       currentPage: 1,
     }
   },
@@ -76,13 +91,41 @@ export default {
           return listStatus;
         })
         .then((response) => {
+        console.table(response)
         this.dataStatusGet = response;
 
         });
     },
+
+    async count (){
+
+        felizRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta1').value = "felices = " + count;
+        console.log("felicez " + count);
+        })
+
+        enojaRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta2').value = "enojados = " + count;
+        console.log("enojado " + count);
+        })
+
+        trizRef.once('value',(snapshot) => {
+        var count = snapshot.numChildren();
+        this.contadores = count;
+        document.getElementById('conta3').value = "triztes = " + count;
+        console.log("tristes " + count);
+        })
+    },
   },
 };
 </script>
+
+
+
 
 <style scoped>
 .py-3 {
@@ -95,11 +138,11 @@ export default {
   border-color: blue;
 }
 .contenedorinte{
-  margin-top: 5%;
+  margin-top:3%;
 }
 .contemelo{
   color: #039be5;
-  margin-top: 60px;
+  margin-top: 20px;
   font-family: "snap itc";
 }
 .cara2{
@@ -107,4 +150,14 @@ export default {
   width: 100%;
 }
 
+.contadores{
+  margin-top: 20px;
+  font-family: cursive;
+  text-justify: auto;
+  font-size: 20px;
+}
+
+.color{
+  background: #97dbfc;
+}
 </style>
