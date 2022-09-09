@@ -13,6 +13,8 @@ import 'bootstrap-vue/dist/bootstrap-vue'
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 
 import VWave from 'v-wave'
@@ -20,6 +22,8 @@ import Ripple from 'vue-material-design-ripple'
 import 'vue-material-design-ripple/dist/vue-material-design-ripple.css'
 
 
+// CommonJS
+Vue.use(VueSweetalert2);
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VWave)
