@@ -28,7 +28,8 @@
     "vue-material": "^1.0.0-beta-15",
     "vue-material-design-ripple": "^1.0.0",
     "vue-recaptcha": "^2.0.2",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "vue-sweetalert2": "^5.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
