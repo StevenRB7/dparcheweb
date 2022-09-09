@@ -2,9 +2,9 @@
 
 <template>
   <div class="cara2">
-    <h1 class="contemelo">Eventos</h1>
+    <h1 class="contemelo correr">Eventos</h1>
     <section class="contenedorinte">
-      <div class="control-label" align="center">
+      <div class="control-label correr" align="center">
         <div class="input-group" style="width: 50%" align="center">
           <b-form-input
             v-model="filter"
@@ -39,6 +39,7 @@
         </template>
       </b-table>
       <b-pagination
+      class="correr"
         align="center"
         v-model="currentPage"
         :total-rows="rows"
@@ -148,5 +149,9 @@ export default {
 .cara2 {
   margin-left: 200px;
   width: 100%;
+}
+
+.correr{
+  margin-right: 350px;
 }
 </style>

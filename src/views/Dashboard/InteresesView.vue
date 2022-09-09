@@ -199,7 +199,7 @@ export default {
   margin-top: 20px;
   font-family: cursive;
   text-justify: auto;
-  font-size: 20px;
+  font-size: 17px;
 }
 .color{
   background: rgb(148, 224, 243);

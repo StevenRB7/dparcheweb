@@ -2,9 +2,9 @@
 
 <template>
 <div class="cara2">
-  <h1 class="contemelo ">Estados de Animo</h1>
+  <h1 class="contemelo correr">Estados de Animo</h1>
   <section class="contenedorinte">
-      <div class="control-label" align="center">
+      <div class="control-label correr" align="center">
         <div class="input-group" style="width: 50%" align="center"> 
              
              <b-form-input
@@ -23,10 +23,10 @@
 
        </template> -->
     </b-table>
-    <b-pagination align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
+    <b-pagination class="correr" align="center" v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
   </section>
   <div>
-  <a type="button" @click="count()" class="btn btn-secondary">Generar Registro</a>
+  <a type="button" @click="count()" class="btn btn-secondary correr">Generar Registro</a>
 </div>
 <div class="contadores">
  
@@ -155,9 +155,14 @@ export default {
   font-family: cursive;
   text-justify: auto;
   font-size: 20px;
+  margin-right: 350px;
 }
 
 .color{
   background: #97dbfc;
+}
+
+.correr{
+  margin-right: 350px;
 }
 </style>

@@ -1,9 +1,9 @@
 <!-- eslint-disable -->
 <template class="body">
   <div class="cara2">
-    <h1 class="contemelo">Publicaciones</h1>
+    <h1 class="contemelo correr">Publicaciones</h1>
     <section class="cara3">
-      <div class="control-label" align="center">
+      <div class="control-label correr" align="center">
         <div class="input-group" style="width: 50%" align="center">
           <b-form-input
             v-model="filter"
@@ -74,10 +74,10 @@ export default {
         { key: "data.nomCorreo", label: "Usuario" },
         { key: "data.categorias", label: "Categoria" },
         { key: "data.descripciones", label: "Descripcion" },
-        { key: "data.fotoCorreo", label: "Img Perfil" },
+        { key: "data.fotoCorreo", label: " Url Img Perfil" },
         { key: "data.tiempo", label: "Fecha" },
         { key: "data.ubicacion", label: "Ubicacion" },
-        { key: "data.url", label: "Img Publicacion" },
+        { key: "data.url", label: "Url Img Publicacion" },
         "Opciones",
       ],
       dataStatusGet: [],
@@ -153,5 +153,8 @@ export default {
 }
 .cara3 {
   width: 100%;
+}
+.correr{
+  margin-right: 350px;
 }
 </style>
