@@ -118,8 +118,12 @@
             </button>
           </div>
           <div class="text-center fs-6">
-            <a href="#">¿Olvidaste tu contraseña?</a>
+            <a href="#">Bienvenido Developer</a>
           </div>
+
+          <!-- <div class="text-center fs-6">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div> -->
         </div>
       </ul>
     </div>

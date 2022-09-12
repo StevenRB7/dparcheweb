@@ -71,7 +71,7 @@
             <hr class="hr" />
             <p>
               Generar con la ayuda de herramientas TIC espacios dedicados a
-              mejorar la salud mental de las personas y economía.
+              mejorar la salud mental de los estudiantes CTPI y la economía.
             </p>
             <a href="#nosotros" class="btn">CONTACTANOS</a>
           </div>
@@ -338,7 +338,7 @@
               </li>
 
               <li class="redes2">
-                <a href="https://www.instagram.com/" target="_blank">
+                <a href="https://www.instagram.com/dparche__/" target="_blank">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -768,8 +768,6 @@ export default {
       margin-top: -20px;
     padding: 40px;
   background-position:right ; } } */
-
-element.style {}
 
 .arow {
   display: flex;
