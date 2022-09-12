@@ -114,13 +114,13 @@ export default {
     async eliminarDato(id) {
       this.$swal
         .fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
+          title: "Estas segur@?",
+          text: "¡No podrás revertir esto!",
+          icon: "advertencia",
           showCancelButton: true,
           confirmButtonColor: "#3085d6",
           cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, delete it!",
+          confirmButtonText: "¡Sí, bórralo!",
         })
         .then((result) => {
           if (result.isConfirmed) {

@@ -111,7 +111,7 @@ export default {
          db.collection("Intereses").doc(id).delete().then(() => {
          console.log("Registro eliminado Correctamente " + id);
          }).catch(function(error) {
-         console.error("Error removing document: ", error);  
+         console.error("Error al eliminar el documento: ", error);  
          });
       }else{
 
