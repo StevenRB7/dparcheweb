@@ -117,9 +117,9 @@
               Iniciar Sesion
             </button>
           </div>
-          <div class="text-center fs-6">
+          <!-- <div class="text-center fs-6">
             <a href="#">¿Olvidaste tu contraseña?</a>
-          </div>
+          </div> -->
         </div>
       </ul>
     </div>
