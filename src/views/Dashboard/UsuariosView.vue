@@ -90,7 +90,7 @@ export default {
               searching: true,
               lenguaje: {
                 sInfo: "Mostrando registros del _START_ al _END_",
-                url: "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json",
+                url: "//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json",
               },
             });
           });

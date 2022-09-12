@@ -71,7 +71,7 @@
             <hr class="hr" />
             <p>
               Generar con la ayuda de herramientas TIC espacios dedicados a
-              mejorar la salud mental de las personas y economía.
+              mejorar la salud mental de los estudiantes CTPI y la economía.
             </p>
             <a href="#nosotros" class="btn">CONTACTANOS</a>
           </div>
