@@ -26,7 +26,8 @@
           :fields="fields"
           :per-page="perPage"
           :current-page="currentPage"
-          style="width: 80%"
+         
+          class="tablagod"
         >
           <template #cell(Opciones)="row">
             <a
@@ -38,6 +39,7 @@
           </template>
         </b-table>
         <b-pagination
+        class="correr"
           align="center"
           v-model="currentPage"
           :total-rows="rows"
@@ -156,5 +158,8 @@ export default {
 }
 .correr{
   margin-right: 350px;
+}
+.tablagod{
+width: 80%;
 }
 </style>

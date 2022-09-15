@@ -177,10 +177,10 @@ export default {
   border-color: blue;
 }
 .contenedorinte{
-  margin-top: 5%;
+  margin-top: 3%;
 }
 .contemelo{
-  margin-top: 60px;
+  margin-top: 50px;
   color: #039be5;
   text-shadow: -1px -1px 1px #aaa
   0px 4px 1px rgba(0,0,0,0.5),
