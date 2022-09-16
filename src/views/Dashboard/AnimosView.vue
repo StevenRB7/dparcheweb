@@ -15,7 +15,7 @@
         </div>
 <br>
 </div>
-    <b-table thead-class="green-bg bg-secondary text-white" responsive="sm" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="table melo" style="width: 80%" align="center" >
+    <b-table thead-class="green-bg bg-secondary text-white" responsive="sm" hover caption-top :filter="filter" id="my-table" :items="dataStatusGet" :fields="fields" :per-page="perPage" :current-page="currentPage" class="tablemelo" style="width: 80%" align="center" >
        <!-- <template #cell(Acciones)="row">
           
           <a type="button" @click="borrarAutores(row.item.id)" class="btn btn-secondary"><font-awesome-icon icon
@@ -165,8 +165,10 @@ export default {
 .cara2{
   position: relative;
   margin-left: 300px;
-  margin-right: 300px;
   min-height: 90vh;
   min-width: 130vh;
+}
+.tablemelo{
+width: 100%;
 }
 </style>
