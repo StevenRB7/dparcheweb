@@ -168,5 +168,6 @@ export default {
 }
 .tablagod{
 width: 70%;
+width: 80%;
 }
 </style>

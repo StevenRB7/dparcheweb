@@ -39,29 +39,30 @@
         <br><br>
     </div>
     <div class="navigation-icons">
-      <i class="fas fa-grin-alt" @click="Animos()"></i>
+      <i v-if="emp !== 'empresa' " class="fas fa-grin-alt" @click="Animos()"></i>
       <i class="fas fa-futbol"  @click="Eventos()"></i>
       <i class="fas fa-skating"  @click="CrearEvento()"></i>
       <i class="fa-solid fa-shop"  @click="Empresa()"></i>
       <i class="fa-solid fa-toolbox"  @click="CrearEmpresa()"></i>
-      <i class="fas fa-file-alt"  @click="Frases()"></i>
-      <i class="fa-brands fa-stack-overflow"  @click="Intereses()"></i>
-      <i class="fas fa-chalkboard-teacher" @click="Publicaciones()"></i>
-      <i class="fa-solid fa-users" @click="Usuarios()"></i>
+      <i v-if="emp !== 'empresa' " class="fas fa-file-alt"  @click="Frases()"></i>
+      <i v-if="emp !== 'empresa' " class="fa-brands fa-stack-overflow"  @click="Intereses()"></i>
+      <i v-if="emp !== 'empresa' " class="fas fa-chalkboard-teacher" @click="Publicaciones()"></i>
+      <i v-if="emp !== 'empresa' " class="fa-solid fa-users" @click="Usuarios()"></i>
 
       <i class="mover fa fa-sign-out"  @click="salir()"></i>
     </div>
     <div class="navigation-links">
       <transition-group name="fade">
-        <div v-show="showLink" @click="Animos()" key="1">Estados de animo</div>
-        <div v-show="showLink" @click="Eventos()" key="5">Eventos</div>
+        <div  v-show="showLink" @click="Animos()" v-if="emp !== 'empresa' " key="1">Estados de animo
+        </div>
+        <div v-show="showLink" @click="Eventos()"  key="5">Eventos</div>
         <div v-show="showLink" @click="CrearEvento()" key="2">Crear Evento</div>
         <div v-show="showLink" @click="Empresa()" key="5">Empresas</div>
         <div v-show="showLink" @click="CrearEmpresa()" key="5">Crear Empresa</div>
-        <div v-show="showLink" @click="Frases()" key="3">Frases</div>
-        <div v-show="showLink" @click="Intereses()" key="4">Intereses</div>
-        <div v-show="showLink" @click="Publicaciones()" key="5">Publicaciones</div>
-        <div v-show="showLink" @click="Usuarios()" key="5">Usuarios</div>
+        <div v-show="showLink" @click="Frases()" v-if="emp !== 'empresa' " key="3">Frases</div>
+        <div v-show="showLink" @click="Intereses()" v-if="emp !== 'empresa' "  key="4">Intereses</div>
+        <div v-show="showLink" @click="Publicaciones()" v-if="emp !== 'empresa' " key="5">Publicaciones</div>
+        <div v-show="showLink" @click="Usuarios()" v-if="emp !== 'empresa' " key="5">Usuarios</div>
 
         <div class="mover2" v-show="showLink" @click="salir()" key="7">Cerrar sesión</div>
 
@@ -78,8 +79,8 @@ export default {
     showLink: false,
     nombre: localStorage.getItem('nombre'),
     apellido: localStorage.getItem('apellido'),
-    cerrar: localStorage.getItem('rol')
-    // rol: localStorage.getItem('rol')
+    cerrar: localStorage.getItem('rol'),
+    emp: localStorage.getItem('rol')
   }),
   // dataa: () => {
   //   // return {

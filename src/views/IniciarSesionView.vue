@@ -142,7 +142,7 @@ export default {
       return this.showPassword ? "Hide" : "Show";
     },
   },
-  name: "Inicios",
+  name: "IniciarSesion",
   components: {},
   data() {
     return {
@@ -215,12 +215,16 @@ export default {
             //console.log(response.data.rows[0].rol);
             //console.log(access_token);
             if (this.user.rol === "administrador") {
-              //opcion vuex
-              //store.dispatch('mockLogin')
-              this.$router.push("/dashboard");
+
+              this.$router.push("/empresa");
             }
+            
           } else {
             this.message = this.$swal("Email y/o clave incorrecta");
+          }
+          if (this.user.rol === "empresa") {
+
+            this.$router.push("/empresa");
           }
 
           console.log(response);

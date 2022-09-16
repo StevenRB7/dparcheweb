@@ -5,7 +5,7 @@ import EstadosAnimoView from '../views/EstadosAnimoView.vue'
 import RegistroEventosView from '../views/Eventos/RegistroEventosView.vue'
 import RegistroEmpresasView from '../views/Empresas/RegistroEmpresasView.vue'
 import IniciarSesionView from '../views/IniciarSesionView.vue'
-import DashboardView from '../views/Dashboard/DashboardView.vue'
+import EmpresasView from '../views/Dashboard/EmpresasView.vue'
 
 // import Messages from '../views/Dashboard/Messages.vue'
 // import Overview from '../views/Dashboard/Overview.vue'
@@ -43,11 +43,11 @@ const routes = [
   },
   {
     path: '',
-    component: DashboardView,
+    component: EmpresasView,
     children: [
       {
-        path: '/dashboard',
-        component: () => import('../views/Dashboard/PublicacionesView.vue')
+        path: '/empresa',
+        component: () => import('../views/Dashboard/EmpresasView.vue')
       },
       {
         path: '/eventos',
@@ -75,8 +75,8 @@ const routes = [
         component: () => import('../views/Dashboard/VerEventosView.vue')
       },
       {
-        path: '/empresa',
-        component: () => import('../views/Dashboard/EmpresasView.vue')
+        path: '/dashboard',
+        component: () => import('../views/Dashboard/PublicacionesView.vue')
       },
       {
         path: '/crearEmpresa',
