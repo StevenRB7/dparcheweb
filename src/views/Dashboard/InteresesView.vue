@@ -191,7 +191,6 @@ export default {
   background-color: rgb(65, 119, 254);
   border-color: blue;
 }
-<<<<<<< HEAD
 .contenedorinte {
   margin-top: 5%;
 }
