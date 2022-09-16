@@ -37,8 +37,8 @@ const routes = [
     component: RegistroEmpresasView
   },
   {
-    path: '/Inicios',
-    name: 'Inicios',
+    path: '/IniciarSesion',
+    name: 'IniciarSesion',
     component: IniciarSesionView
   },
   {
@@ -73,6 +73,14 @@ const routes = [
       {
         path: '/vereventos',
         component: () => import('../views/Dashboard/VerEventosView.vue')
+      },
+      {
+        path: '/empresa',
+        component: () => import('../views/Dashboard/EmpresasView.vue')
+      },
+      {
+        path: '/crearEmpresa',
+        component: () => import('../views/Dashboard/CrearEmpresaView.vue')
       }
     ]
   }

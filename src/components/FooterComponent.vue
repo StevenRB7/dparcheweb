@@ -13,7 +13,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0733013783824!2d-76.56465938482123!3d2.4826874981908746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e300410eb607c65%3A0x614545787e90bea6!2sSENA!5e0!3m2!1ses-419!2sco!4v1660662008619!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div>
-      <img class="www" src="../assets/qrq.png"/>
+      <img class="www" src="../assets/redes.png"/>
       </div>
     </div>
 </div>
@@ -45,7 +45,7 @@ export default {
     text-decoration: none;
     text-transform: uppercase;
     list-style: none;
-color:#fff;
+    color:#fff;
   }
 
 footer {
