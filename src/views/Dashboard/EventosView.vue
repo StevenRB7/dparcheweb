@@ -242,3 +242,12 @@ export default {
   },
 };
 </script>
+<style scoped>
+  .Eventos{
+position: relative;
+  margin-left: 300px;
+  margin-right: 300px;
+  min-height: 90vh;
+  min-width: 100vh;
+  }
+</style>

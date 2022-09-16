@@ -147,8 +147,11 @@ export default {
   font-family: "snap itc";
 }
 .cara2 {
-  margin-left: 200px;
-  width: 100%;
+  position: relative;
+  margin-left: 300px;
+  margin-right: 300px;
+  min-height: 90vh;
+  min-width: 100vh;
 }
 
 .correr{

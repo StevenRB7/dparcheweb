@@ -145,10 +145,7 @@ export default {
   margin-top: 20px;
   font-family: "snap itc";
 }
-.cara2{
-  margin-left: 180px;
-  width: 100%;
-}
+
 
 .contadores{
   margin-top: 20px;
@@ -164,5 +161,12 @@ export default {
 
 .correr{
   margin-right: 350px;
+}
+.cara2{
+  position: relative;
+  margin-left: 300px;
+  margin-right: 300px;
+  min-height: 90vh;
+  min-width: 130vh;
 }
 </style>

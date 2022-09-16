@@ -138,8 +138,9 @@ export default {
 
 <style scoped>
 .Empresas {
+  position: absolute;
   margin-left: 300px;
-  margin-right: 300px;
+  min-height: 100vh;
 }
 
 .contemelo {
