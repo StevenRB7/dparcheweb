@@ -93,7 +93,7 @@ export default {
     Animos () {
       this.$router.push('/animos')
     },
-    Eventos () {
+    CrearEvento () {
       this.$router.push('/eventos')
     },
     Frases () {
@@ -108,7 +108,7 @@ export default {
     Usuarios () {
       this.$router.push('/usuarios')
     },
-    Eventos2 () {
+    Eventos () {
       this.$router.push('/vereventos')
     },
     Empresa () {
