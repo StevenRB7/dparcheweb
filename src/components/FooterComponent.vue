@@ -128,7 +128,21 @@ footer {
   position: relative;
   flex-wrap: wrap;
   min-width: 100px;
+  background: center;
 
 }
   }
+
+@media (max-width: 1282px) {
+  .qr {
+    position: relative;
+    flex-wrap: wrap;
+    min-width: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+
+  }
+}
+
 </style>
