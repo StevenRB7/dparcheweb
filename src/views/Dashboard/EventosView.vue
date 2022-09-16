@@ -228,7 +228,7 @@ export default {
           }
         )
         .then((response) => {
-        setTimeout(() => this.$router.push('/vereventos'), 2000);
+          setTimeout(() => this.$router.push("/vereventos"), 2000);
           this.$swal.fire({
             position: "top-center",
             icon: "success",
