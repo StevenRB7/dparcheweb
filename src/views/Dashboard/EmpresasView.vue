@@ -10,7 +10,12 @@
 <script>
 /* eslint-disable */
 // @ is an alias to /src
-
+import Sidebar from '@/components/Sidebar.vue'
+export default {
+  components: {
+    Sidebar
+  }
+}
 </script>
 
 <style>

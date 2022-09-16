@@ -141,11 +141,11 @@ export default {
   position: absolute;
   margin-left: 300px;
   min-height: 100vh;
+  min-width: 100vh;
 }
 
 .contemelo {
   color: #039be5;
-  margin-top: 60px;
   font-family: "snap itc";
 }
 </style>
