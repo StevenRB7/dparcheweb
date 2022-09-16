@@ -26,7 +26,8 @@
           :fields="fields"
           :per-page="perPage"
           :current-page="currentPage"
-          style="width: 80%"
+         
+          class="tablagod"
         >
           <template #cell(Opciones)="row">
             <a
@@ -38,6 +39,7 @@
           </template>
         </b-table>
         <b-pagination
+        class="correr"
           align="center"
           v-model="currentPage"
           :total-rows="rows"
@@ -157,11 +159,16 @@ export default {
 .correr{
   margin-right: 350px;
 }
+<<<<<<< HEAD
 .cara2{
   position: relative;
   margin-left: 300px;
   margin-right: 300px;
   min-height: 90vh;
   min-width: 100vh;
+=======
+.tablagod{
+width: 80%;
+>>>>>>> 6fce68d52d8d8260153a95696fbb922fa87dbf91
 }
 </style>

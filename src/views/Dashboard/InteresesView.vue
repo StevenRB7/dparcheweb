@@ -191,11 +191,19 @@ export default {
   background-color: rgb(65, 119, 254);
   border-color: blue;
 }
+<<<<<<< HEAD
 .contenedorinte {
   margin-top: 5%;
 }
 .contemelo {
   margin-top: 60px;
+=======
+.contenedorinte{
+  margin-top: 3%;
+}
+.contemelo{
+  margin-top: 50px;
+>>>>>>> 6fce68d52d8d8260153a95696fbb922fa87dbf91
   color: #039be5;
   text-shadow: -1px -1px 1px #aaa 0px 4px 1px rgba(0, 0, 0, 0.5),
     4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);

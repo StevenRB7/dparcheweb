@@ -15,7 +15,7 @@
                       <a class="nav-link" href="#inicio" tabindex="-1" aria-disabled="true">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#act" tabindex="-1" aria-disabled="true">Actividades</a>
+                      <a class="nav-link" href="#actividades" tabindex="-1" aria-disabled="true">Actividades</a>
                     </li>
                     <!-- <li class="nav-item"> <a class="nav-link" href="#eventos" tabindex="-1" aria-disabled="true">Eventos</a></li> -->
                     <li class="nav-item">
@@ -25,7 +25,7 @@
                       <a class="nav-link" href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                      <a to="/Inicios" class="nav-link" href="/Inicios" tabindex="-1" aria-disabled="true">Iniciar
+                      <a to="/IniciarSesion" class="nav-link" href="/IniciarSesion" tabindex="-1" aria-disabled="true">Iniciar
                         Sesión</a>
                     </li>
                   </ul>
@@ -79,7 +79,7 @@
       </div>
     </div>
     <h2 class="let container">Actividades</h2>
-    <div class="container recent" id="act">
+    <div class="container recent" id="actividades">
       <div class="row">
         <div class="container owl-carousel owl-carousel2 owl-theme d-flex">
           <div>
@@ -308,8 +308,7 @@
       <div class="container align-items-center">
         <div class="row mb-5 pb-5"></div>
         <h4 class="let text-center">
-          Si quieres que tu evento sea publicado en nuestra aplicación nos
-          puedes mandar tu evento en los siguientes enlaces:
+          Síguenos en nuestras redes sociales
         </h4>
         <hr />
         <br />
@@ -945,9 +944,9 @@ justify-content:center;
 }
 .ja{
 
-   margin-left: 70%;
-
+  margin-left: 70%;
   margin:auto;
-		    display:block;
+	display:block;
+  cursor: pointer; cursor: hand;
 }
 </style>

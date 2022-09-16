@@ -222,6 +222,7 @@ export default {
           } else {
             this.message = this.$swal("Email y/o clave incorrecta");
           }
+
           console.log(response);
         });
     },
@@ -471,7 +472,7 @@ label {
 }
 .button{
   border-radius: 10px;
-  cursor: pointer;
+  cursor: pointer; cursor: hand;
 }
 
 
