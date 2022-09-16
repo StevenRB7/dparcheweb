@@ -139,7 +139,7 @@ export default {
   border-color: blue;
 }
 .contenedorinte {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 .contemelo {
   color: #039be5;
