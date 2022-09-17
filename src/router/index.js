@@ -5,7 +5,7 @@ import EstadosAnimoView from '../views/EstadosAnimoView.vue'
 import RegistroEventosView from '../views/Eventos/RegistroEventosView.vue'
 import RegistroEmpresasView from '../views/Empresas/RegistroEmpresasView.vue'
 import IniciarSesionView from '../views/IniciarSesionView.vue'
-import EmpresasView from '../views/Dashboard/EmpresasView.vue'
+import DashboardView from '../views/Dashboard/DashboardView.vue'
 
 // import Messages from '../views/Dashboard/Messages.vue'
 // import Overview from '../views/Dashboard/Overview.vue'
@@ -43,7 +43,7 @@ const routes = [
   },
   {
     path: '',
-    component: EmpresasView,
+    component: DashboardView,
     children: [
       {
         path: '/empresa',

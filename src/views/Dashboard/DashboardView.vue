@@ -17,10 +17,10 @@ export default {
   },
   mounted(){
     if (localStorage.token != null){
-      this.$router.push('/dashboard')
+      this.$router.push('/eventos')
 
     }else{
-      this.$router.push('/Inicios')
+      this.$router.push('/IniciarSesion')
 
     }
   }
@@ -47,7 +47,6 @@ export default {
 nav {
   padding: 30px;
 }
-
 nav a {
   font-weight: bold;
   color: #2c3e50;

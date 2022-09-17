@@ -218,14 +218,15 @@ export default {
 
               this.$router.push("/empresa");
             }
+            if (this.user.rol === "empresa") {
+
+              this.$router.push("/vereventos");
+            }
             
           } else {
             this.message = this.$swal("Email y/o clave incorrecta");
           }
-          if (this.user.rol === "empresa") {
-
-            this.$router.push("/empresa");
-          }
+         
 
           console.log(response);
         });

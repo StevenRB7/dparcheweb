@@ -1,6 +1,7 @@
 <!-- eslint-disable -->
 
 <template>
+
   <div class="cara2">
     <h1 class="contemelo correr">Eventos</h1>
     <section class="contenedorinte">
