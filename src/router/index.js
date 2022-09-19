@@ -6,6 +6,8 @@ import RegistroEventosView from '../views/Eventos/RegistroEventosView.vue'
 import RegistroEmpresasView from '../views/Empresas/RegistroEmpresasView.vue'
 import IniciarSesionView from '../views/IniciarSesionView.vue'
 import DashboardView from '../views/Dashboard/DashboardView.vue'
+import EditEventosView from '../views/EditEventosView.vue'
+import DashboardEventosView from '../views/DashEventos/DashboardEventosView.vue'
 
 // import Messages from '../views/Dashboard/Messages.vue'
 // import Overview from '../views/Dashboard/Overview.vue'
@@ -40,6 +42,29 @@ const routes = [
     path: '/IniciarSesion',
     name: 'IniciarSesion',
     component: IniciarSesionView
+  },
+  {
+    path: '/EditEventosView',
+    name: 'EditEventosView',
+    component: EditEventosView
+  },
+  {
+    path: '',
+    component: DashboardEventosView,
+    children: [
+      {
+        path: '/dashempresa',
+        component: () => import('../views/DashEventos/DashEmpresaView')
+      },
+      {
+        path: '/dasheventos',
+        component: () => import('../views/DashEventos/DashCrearEventosView')
+      },
+      {
+        path: '/dashvereventos',
+        component: () => import('../views/DashEventos/DashEventosView.vue')
+      }
+    ]
   },
   {
     path: '',

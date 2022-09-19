@@ -157,13 +157,13 @@ export default {
   width: 100%;
 }
 .correr{
-  margin-right: 700px;
+  margin-right: 500px;
 }
 .cara2{
   position: relative;
-  margin-left: 300px;
+  margin-left: 150px;
   margin-right: 300px;
-  min-height: 90vh;
+  min-height: 100vh;
   min-width: 100vh;
 }
 .tablagod{

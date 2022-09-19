@@ -30,15 +30,15 @@
         style="width: 80%"
         align="center"
       >
-        <template #cell(Opciones)="row" class="botonees">
+        <!-- <template #cell(Opciones)="row" class="botonees">
           <a type="button" @click="eliminarDato(row.item.id)" class="btn btn-danger"><b-icon icon="trash-fill" aria-hidden="true"></b-icon></a>
-          <!-- <a type="button" @click="enviarDato(row.item.id)" class="btn btn-warning"><b-icon icon="pencil-square" aria-hidden="true"></b-icon></a> -->
-          <!-- <router-link
+          <a type="button" @click="enviarDato(row.item.id)" class="btn btn-warning"><b-icon icon="pencil-square" aria-hidden="true"></b-icon></a>
+          <router-link
             :to="{ name: 'EditEventosView', params: { id: row.item.id} }"
             class="btn btn-outline-info mx-2" title="Editar Evento">
             <i class="fa-solid fa-pen-to-square"></i>
-            </router-link> -->
-        </template>
+            </router-link>
+        </template> -->
       </b-table>
       <b-pagination
       class="correr"
@@ -72,8 +72,7 @@ export default {
         { key: "nombre", label: "Nombre" },
         { key: "descripcion", label: "Descripcion" },
         { key: "fecha", label: "Fecha" },
-        { key: "imagen", label: "Url Img" },
-        "Opciones",
+        { key: "imagen", label: "Url Img" }
       ],
       dataStatusGet: [],
       filter: null,

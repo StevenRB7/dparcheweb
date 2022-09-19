@@ -190,7 +190,7 @@ export default {
       };
       axios
         .post(
-          "https://interbusapi.herokuapp.com/usuarios/login",
+          "https://deparche-api.herokuapp.com/usuarios/login",
           this.form,
           {
             validateStatus: function (status) {
@@ -220,7 +220,7 @@ export default {
             }
             if (this.user.rol === "empresa") {
 
-              this.$router.push("/vereventos");
+              this.$router.push("/dashvereventos");
             }
             
           } else {

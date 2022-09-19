@@ -11,7 +11,7 @@
     <table
       id="table_id"
       class="table table-bordered"
-      style="width: 90%"
+      style="width: 120%"
       align="center"
     >
       <thead>
@@ -139,7 +139,7 @@ export default {
 <style scoped>
 .Empresas {
   position: absolute;
-  margin-left: 300px;
+  margin-left: 260px;
   min-height: 100vh;
   min-width: 100vh;
 }

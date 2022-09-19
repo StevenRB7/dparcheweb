@@ -73,7 +73,7 @@
           { key: "descripcion", label: "Descripcion" },
           { key: "categoria", label: "Categoria" },
           { key: "telefono", label: "Telefono" },
-          "Opciones",
+         
         ],
         dataStatusGet: [],
         filter: null,

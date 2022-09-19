@@ -321,7 +321,7 @@ export default {
     AgregarEmpresas() {
       axios
         .post(
-          "https://interbusapi.herokuapp.com/api/nuevo_negocio",
+          "https://deparche-api.herokuapp.com/api/nuevo_negocio",
           this.form,
           {
             validateStatus: function (status) {
