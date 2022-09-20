@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
    body {
   font-family: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
