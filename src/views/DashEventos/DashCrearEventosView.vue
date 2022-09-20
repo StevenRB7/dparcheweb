@@ -184,6 +184,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -250,6 +251,7 @@ position: relative;
   min-height: 100vh;
   min-width: 100vh;
   }
+
 </style>
 
 
