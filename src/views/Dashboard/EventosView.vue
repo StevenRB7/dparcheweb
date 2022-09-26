@@ -178,6 +178,7 @@
                     v-on:click="AgregarEventos()"
                     type="button"
                     value="Registrar"
+                    required
                   />
                 </div>
               </form>
